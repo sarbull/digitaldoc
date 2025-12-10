@@ -3,10 +3,53 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Digitaldoc</title>
+  <title>Digitaldoc - Organizează-ți documentele într-un mod simplu și ușor</title>
+  <meta name="description" content="Organizează-ți documentele într-un mod simplu și ușor">
+  <meta name="keywords" content="digitaldoc, organizează-ți documentele, simplu, ușor">
+  <meta name="author" content="Digitaldoc">
+  <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow">
+  <meta name="bingbot" content="index, follow">
+  <meta name="yandexbot" content="index, follow">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #fff;
+    }
+
+    .svg-container {
+      animation: bounce 2s ease-in-out infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+
+    .svg-container img {
+      display: block;
+      max-width: 100%;
+      height: 100px;
+    }
+  </style>
 </head>
 <body>
-  <h1>Digitaldoc</h1>
+  <div class="svg-container">
+    <img src="digitaldoc.svg" alt="Digitaldoc">
+  </div>
 </body>
 </html>
 
