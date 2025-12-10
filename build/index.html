@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Digitaldoc - Organizează-ți documentele într-un mod simplu și ușor</title>
-  <meta name="description" content="Organizează-ți documentele într-un mod simplu și ușor">
-  <meta name="keywords" content="digitaldoc, organizează-ți documentele, simplu, ușor">
+  <meta name="description" content="Soluție completă de management documentar pentru contracte și anexe. Organizează, generează PDF-uri, trimite emailuri și gestionează documentele într-un mod sigur și eficient.">
+  <meta name="keywords" content="digitaldoc, organizează-ți documentele, management documentar, contracte, anexe, PDF, email, siguranță">
   <meta name="author" content="Digitaldoc">
   <meta name="robots" content="index, follow">
   <meta name="googlebot" content="index, follow">
@@ -18,38 +18,371 @@
       box-sizing: border-box;
     }
 
+    :root {
+      --primary-color: #002B7F;
+      --secondary-color: #f8f9fa;
+      --text-color: #333;
+      --text-light: #666;
+      --border-color: #e0e0e0;
+      --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.15);
+    }
+
     body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100svh;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      line-height: 1.6;
+      color: var(--text-color);
       background-color: #fff;
     }
 
-    .svg-container {
-      animation: bounce 2s ease-in-out infinite;
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
     }
 
-    @keyframes bounce {
-      0%, 100% {
+    /* Hero Section */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 40px 20px;
+      background: linear-gradient(135deg, #f8f9fa 0%, #fff 100%);
+    }
+
+    .logo-container {
+      margin-bottom: 30px;
+      animation: fadeInUp 1s ease-out;
+    }
+
+    .logo-container img {
+      max-width: 100%;
+      height: auto;
+      max-height: 120px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      color: var(--primary-color);
+      margin-bottom: 20px;
+      animation: fadeInUp 1s ease-out 0.2s both;
+    }
+
+    .hero .subtitle {
+      font-size: 1.5rem;
+      color: var(--text-light);
+      margin-bottom: 40px;
+      max-width: 700px;
+      animation: fadeInUp 1s ease-out 0.4s both;
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 15px 40px;
+      background-color: var(--primary-color);
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      animation: fadeInUp 1s ease-out 0.6s both;
+      box-shadow: var(--shadow);
+    }
+
+    .cta-button:hover {
+      background-color: #0039a6;
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    /* Features Section */
+    .features {
+      padding: 80px 20px;
+      background-color: #fff;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.5rem;
+      color: var(--primary-color);
+      margin-bottom: 20px;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      font-size: 1.2rem;
+      color: var(--text-light);
+      margin-bottom: 60px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+      margin-top: 60px;
+    }
+
+    .feature-card {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+      transition: all 0.3s ease;
+      border: 1px solid var(--border-color);
+    }
+
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .feature-icon {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: var(--primary-color);
+    }
+
+    .feature-card h3 {
+      font-size: 1.5rem;
+      color: var(--primary-color);
+      margin-bottom: 15px;
+    }
+
+    .feature-card p {
+      color: var(--text-light);
+      line-height: 1.8;
+    }
+
+    /* Benefits Section */
+    .benefits {
+      padding: 80px 20px;
+      background-color: var(--secondary-color);
+    }
+
+    .benefits-list {
+      max-width: 800px;
+      margin: 0 auto;
+      list-style: none;
+    }
+
+    .benefit-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 30px;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+    }
+
+    .benefit-icon {
+      font-size: 2rem;
+      color: var(--primary-color);
+      margin-right: 20px;
+      flex-shrink: 0;
+    }
+
+    .benefit-content h3 {
+      color: var(--primary-color);
+      margin-bottom: 10px;
+      font-size: 1.3rem;
+    }
+
+    .benefit-content p {
+      color: var(--text-light);
+    }
+
+    /* Footer */
+    .footer {
+      background-color: var(--primary-color);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .footer p {
+      margin-bottom: 10px;
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
         transform: translateY(0);
       }
-      50% {
-        transform: translateY(-20px);
-      }
     }
 
-    .svg-container img {
-      display: block;
-      max-width: 100%;
-      height: 100px;
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero .subtitle {
+        font-size: 1.2rem;
+      }
+
+      .section-title {
+        font-size: 2rem;
+      }
+
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="svg-container">
-    <img src="digitaldoc.svg" alt="Digitaldoc">
-  </div>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="logo-container">
+      <img src="digitaldoc.svg" alt="Digitaldoc">
+    </div>
+    <p class="subtitle">Organizează-ți documentele într-un mod simplu și ușor</p>
+    <a href="#features" class="cta-button">Descoperă funcționalitățile</a>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features" id="features">
+    <div class="container">
+      <h2 class="section-title">Funcționalități</h2>
+      <p class="section-subtitle">O platformă completă pentru managementul documentelor tale</p>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">📁</div>
+          <h3>Organizare în Foldere</h3>
+          <p>Organizează contractele și anexele în foldere structurate, cu acces controlat pentru fiecare utilizator.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">📝</div>
+          <h3>Template-uri Personalizabile</h3>
+          <p>Creează template-uri pentru documente cu form builder intuitiv. Suportă multiple tipuri de câmpuri: text, număr, dată, produse și multe altele.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">📸</div>
+          <h3>Integrare DigiStorage</h3>
+          <p>Clienții tăi pot selecta fotografii ce sunt importate în Digitaldoc care mai apoi pot fi organizate direct în DigiStorage.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">📄</div>
+          <h3>Generare PDF</h3>
+          <p>Generează automat documente PDF din template-urile tale, cu toate datele populate corect.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">✉️</div>
+          <h3>Trimitere Email</h3>
+          <p>Trimite documentele generate prin email, cu atașamente PDF, direct din platformă.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <h3>Actualizări în Timp Real</h3>
+          <p>Beneficiază de actualizări instantanee prin WebSocket. Vezi modificările în timp real, fără refresh.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">✅</div>
+          <h3>Verificare și Semnare</h3>
+          <p>Marchează documentele ca verificate sau semnate. Gestionează statusul fiecărui document cu ușurință.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🔍</div>
+          <h3>Filtrare Avansată</h3>
+          <p>Filtrează documentele după status, publicare, blocare sau alte criterii pentru o căutare rapidă.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">📊</div>
+          <h3>Dashboard Centralizat</h3>
+          <p>Vizualizează toate documentele și statisticile importante într-un singur loc, organizat pe categorii.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="benefits">
+    <div class="container">
+      <h2 class="section-title">De ce Digitaldoc?</h2>
+      <p class="section-subtitle">Soluția completă pentru managementul documentelor</p>
+
+      <ul class="benefits-list">
+        <li class="benefit-item">
+          <div class="benefit-icon">🚀</div>
+          <div class="benefit-content">
+            <h3>Rapid și Eficient</h3>
+            <p>Procesare asincronă a documentelor prin sistem de coadă, pentru performanță optimă chiar și cu volume mari de date.</p>
+          </div>
+        </li>
+
+        <li class="benefit-item">
+          <div class="benefit-icon">🎨</div>
+          <div class="benefit-content">
+            <h3>Personalizare Completă</h3>
+            <p>Form builder puternic care îți permite să creezi template-uri complexe cu diverse tipuri de câmpuri, inclusiv liste infinite, produse și imagini.</p>
+          </div>
+        </li>
+
+        <li class="benefit-item">
+          <div class="benefit-icon">🔐</div>
+          <div class="benefit-content">
+            <h3>Siguranță Maximă</h3>
+            <p>Criptare la nivel de bază de date, autentificare robustă și control granular asupra accesului utilizatorilor.</p>
+          </div>
+        </li>
+
+        <li class="benefit-item">
+          <div class="benefit-icon">📱</div>
+          <div class="benefit-content">
+            <h3>Accesibil de Peste Tot</h3>
+            <p>Interfață web modernă, responsive, accesibilă de pe orice dispozitiv. Lucrează eficient de pe desktop, tabletă sau telefon.</p>
+          </div>
+        </li>
+
+        <li class="benefit-item">
+          <div class="benefit-icon">🔄</div>
+          <div class="benefit-content">
+            <h3>Sincronizare Automată</h3>
+            <p>Actualizări în timp real prin WebSocket. Toate modificările sunt sincronizate instant între utilizatori.</p>
+          </div>
+        </li>
+
+        <li class="benefit-item">
+          <div class="benefit-icon">📈</div>
+          <div class="benefit-content">
+            <h3>Scalabil</h3>
+            <p>Arhitectură robustă care poate gestiona mii de documente și utilizatori simultan, cu monitorizare și logging complet.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 Digitaldoc. Toate drepturile rezervate.</p>
+      <p>Organizează-ți documentele într-un mod simplu și ușor</p>
+    </div>
+  </footer>
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-H8D41LK489"></script>
@@ -57,8 +390,23 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-H8D41LK489');
+  </script>
+
+  <!-- Smooth scroll for anchor links -->
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
   </script>
 </body>
 </html>
