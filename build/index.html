@@ -244,6 +244,103 @@
       font-size: 1.05rem;
     }
 
+    /* Pricing Section */
+    .pricing {
+      padding: 80px 20px;
+      background-color: #fff;
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 40px;
+      margin-top: 60px;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .pricing-card {
+      background: white;
+      border: 2px solid var(--border-color);
+      border-radius: 15px;
+      padding: 40px;
+      box-shadow: var(--shadow);
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .pricing-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--primary-color);
+    }
+
+    .pricing-card.featured {
+      border-color: var(--primary-color);
+      border-width: 3px;
+    }
+
+    .pricing-badge {
+      position: absolute;
+      top: -15px;
+      right: 20px;
+      background: var(--primary-color);
+      color: white;
+      padding: 5px 15px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    .pricing-icon {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: var(--primary-color);
+    }
+
+    .pricing-card h3 {
+      font-size: 1.8rem;
+      color: var(--primary-color);
+      margin-bottom: 15px;
+    }
+
+    .pricing-description {
+      color: var(--text-light);
+      line-height: 1.8;
+      margin-bottom: 25px;
+      font-size: 1.05rem;
+    }
+
+    .pricing-features {
+      list-style: none;
+      margin-bottom: 30px;
+    }
+
+    .pricing-features li {
+      padding: 10px 0;
+      color: var(--text-color);
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .pricing-features li:before {
+      content: "✓";
+      color: var(--primary-color);
+      font-weight: bold;
+      margin-right: 10px;
+      font-size: 1.2rem;
+    }
+
+    .pricing-type {
+      font-size: 1.1rem;
+      color: var(--text-light);
+      font-weight: 600;
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 2px solid var(--border-color);
+    }
+
     /* Contact Section */
     .contact {
       padding: 80px 20px;
@@ -524,6 +621,45 @@
           <div class="use-case-icon">📊</div>
           <h3>Profesioniști</h3>
           <p>Ideal pentru oricine colectează și lucrează cu volume mari de date. Organizează, gestionează și procesează eficient documente, informații și fișiere într-un sistem centralizat și structurat.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section class="pricing" id="pricing">
+    <div class="container">
+      <h2 class="section-title">Modele de Plată</h2>
+      <p class="section-subtitle">Alege modelul care se potrivește cel mai bine nevoilor tale</p>
+
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <div class="pricing-icon">☁️</div>
+          <h3>Abonament Cloud</h3>
+          <p class="pricing-description">Soluție în cloud cu abonament lunar. Acces instant, fără necesitatea de infrastructură proprie.</p>
+          <ul class="pricing-features">
+            <li>Acces de oriunde, oricând</li>
+            <li>Actualizări automate</li>
+            <li>Backup și securitate gestionate</li>
+            <li>Suport tehnic inclus</li>
+            <li>Scalabilitate automată</li>
+          </ul>
+          <div class="pricing-type">Plată lunară recurentă</div>
+        </div>
+
+        <div class="pricing-card featured">
+          <div class="pricing-badge">Popular</div>
+          <div class="pricing-icon">🏢</div>
+          <h3>On-Premise</h3>
+          <p class="pricing-description">Instalare pe infrastructura ta, cu o singură plată. Control complet asupra datelor și infrastructurii.</p>
+          <ul class="pricing-features">
+            <li>Control total asupra datelor</li>
+            <li>Fără costuri recurente</li>
+            <li>Personalizare completă</li>
+            <li>Acces doar prin rețeaua ta locală de la birou</li>
+            <li>Securitate sporită</li>
+          </ul>
+          <div class="pricing-type">Plată unică</div>
         </div>
       </div>
     </div>
