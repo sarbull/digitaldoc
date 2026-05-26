@@ -442,12 +442,24 @@
       font-size: 0.75rem;
       font-weight: 600;
       border-radius: 999px;
+      white-space: nowrap;
+    }
+
+    .pricing-badge--price {
+      padding: 0.35rem 1rem;
+      font-size: 0.8rem;
+      font-weight: 500;
+      line-height: 1.25;
+    }
+
+    .pricing-badge--price strong {
+      font-weight: 700;
     }
 
     .pricing-card h3 {
       font-size: 1.35rem;
       color: var(--brand);
-      margin: 0.5rem 0 0.75rem;
+      margin: 0.75rem 0 0.75rem;
     }
 
     .pricing-card .pricing-desc {
@@ -856,6 +868,7 @@
         </div>
         <div class="pricing-grid">
           <article class="pricing-card">
+            <span class="pricing-badge pricing-badge--price"><strong>32,5 RON</strong> · fără TVA</span>
             <h3>Cloud</h3>
             <p class="pricing-desc">Acces imediat, fără servere de administrat. Actualizări și backup gestionate pentru tine.</p>
             <ul class="pricing-features">
