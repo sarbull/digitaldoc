@@ -107,9 +107,18 @@
       z-index: 100;
       height: var(--header-h);
       background: var(--header-bg);
-      backdrop-filter: blur(12px);
       border-bottom: 1px solid transparent;
       transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+    }
+
+    .site-header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      pointer-events: none;
     }
 
     .site-header.is-scrolled {
@@ -163,10 +172,19 @@
 
     .nav-links a:hover { color: var(--brand); }
 
-    .header-tools {
+    .header-nav-panel {
       display: flex;
       align-items: center;
-      gap: 0.75rem;
+      gap: 1.75rem;
+      flex: 1;
+      justify-content: flex-end;
+      min-width: 0;
+    }
+
+    .header-bar-end {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
       flex-shrink: 0;
     }
 
@@ -174,6 +192,11 @@
       display: flex;
       align-items: center;
       gap: 0.75rem;
+      flex-shrink: 0;
+    }
+
+    .nav-backdrop {
+      display: none;
     }
 
     .icon-btn {
@@ -780,34 +803,134 @@
     }
 
     @media (max-width: 960px) {
-      .nav-links { display: none; }
-      .header-cta .btn-ghost { display: none; }
-      .site-header.nav-open .header-cta .btn-ghost {
+      .header-inner {
+        gap: 0.75rem;
+      }
+
+      .logo-link {
+        flex: 1;
+        min-width: 0;
+      }
+
+      .logo-link img {
+        height: 32px;
+      }
+
+      .header-bar-end {
+        margin-left: auto;
+      }
+
+      .menu-toggle {
         display: inline-flex;
+      }
+
+      .header-nav-panel {
+        display: none;
+      }
+
+      .site-header.nav-open {
+        height: 100vh;
+        height: 100dvh;
+        max-height: 100dvh;
+        overflow: hidden;
+        background: var(--surface);
+        border-bottom-color: var(--border);
+      }
+
+      .site-header.nav-open::before {
+        display: none;
+      }
+
+      .site-header.nav-open .header-inner {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        grid-template-rows: var(--header-h) minmax(0, 1fr);
+        align-items: stretch;
+        width: 100%;
+        max-width: none;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        gap: 0;
+      }
+
+      .site-header.nav-open .logo-link {
+        align-self: center;
+        padding-left: max(1.25rem, env(safe-area-inset-left));
+      }
+
+      .site-header.nav-open .header-bar-end {
+        align-self: center;
+        padding-right: max(1.25rem, env(safe-area-inset-right));
+      }
+
+      .site-header.nav-open .header-nav-panel {
+        display: flex;
+        grid-column: 1 / -1;
+        grid-row: 2;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        gap: 0;
+        min-height: 0;
+        overflow-x: hidden;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: max(1.5rem, env(safe-area-inset-bottom));
+      }
+
+      nav {
+        width: 100%;
+        flex-shrink: 0;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        width: 100%;
+      }
+
+      .nav-links li {
+        border-bottom: 1px solid var(--border);
+      }
+
+      .nav-links a {
+        display: block;
+        padding: 1rem 1.25rem;
+        font-size: 1.05rem;
+        color: var(--text);
+      }
+
+      .nav-links a:hover,
+      .nav-links a:focus-visible {
+        color: var(--brand);
+        background: var(--brand-soft);
+      }
+
+      .header-cta {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.75rem;
+        width: 100%;
+        margin-top: auto;
+        padding: 1.25rem 1.25rem 0;
+        border-top: 1px solid var(--border);
+      }
+
+      .header-cta .btn {
+        width: 100%;
+        justify-content: center;
+        padding: 0.85rem 1.25rem;
+        font-size: 1rem;
+      }
+
+      .nav-backdrop {
+        display: none !important;
       }
     }
 
     @media (max-width: 720px) {
-      .header-cta .btn-primary { padding: 0.55rem 1rem; font-size: 0.85rem; }
-      .menu-toggle { display: inline-flex; }
-      .site-header.nav-open .nav-links {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: var(--header-h);
-        left: 0;
-        right: 0;
-        padding: 1.25rem;
-        background: var(--surface);
-        border-bottom: 1px solid var(--border);
-        box-shadow: var(--shadow);
-      }
-      .site-header.nav-open .header-cta {
-        position: absolute;
-        top: calc(var(--header-h) + 12rem);
-        left: 1.25rem;
-        right: 1.25rem;
-      }
       .features-grid,
       .audience-grid,
       .pricing-grid { grid-template-columns: 1fr; }
@@ -820,16 +943,22 @@
       <a href="https://www.digitaldoc.ro" class="logo-link" aria-label="Digitaldoc acasă">
         <img src="digitaldoc.svg" alt="">
       </a>
-      <nav>
-        <ul class="nav-links" id="nav-links">
-          <li><a href="#features">Funcționalități</a></li>
-          <li><a href="#how">Cum funcționează</a></li>
-          <li><a href="#for-whom">Pentru cine</a></li>
-          <li><a href="#pricing">Prețuri</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-      <div class="header-tools">
+      <div class="header-nav-panel" id="header-nav-panel">
+        <nav aria-label="Principal">
+          <ul class="nav-links" id="nav-links">
+            <li><a href="#features">Funcționalități</a></li>
+            <li><a href="#how">Cum funcționează</a></li>
+            <li><a href="#for-whom">Pentru cine</a></li>
+            <li><a href="#pricing">Prețuri</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="header-cta">
+          <a href="https://aplicatia.digitaldoc.ro/login" class="btn btn-ghost">Autentificare</a>
+          <a href="https://aplicatia.digitaldoc.ro/register" class="btn btn-primary">Începe gratuit</a>
+        </div>
+      </div>
+      <div class="header-bar-end">
         <div class="theme-menu" id="theme-menu">
           <button
             type="button"
@@ -853,18 +982,15 @@
             <li><button type="button" class="theme-menu__option" role="option" data-theme-value="dark">Întunecat</button></li>
           </ul>
         </div>
-        <div class="header-cta">
-          <a href="https://aplicatia.digitaldoc.ro/login" class="btn btn-ghost">Autentificare</a>
-          <a href="https://aplicatia.digitaldoc.ro/register" class="btn btn-primary">Începe gratuit</a>
-        </div>
+        <button type="button" class="icon-btn menu-toggle" id="menu-toggle" aria-label="Meniu" aria-expanded="false" aria-controls="header-nav-panel">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
       </div>
-      <button type="button" class="icon-btn menu-toggle" id="menu-toggle" aria-label="Meniu" aria-expanded="false">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M4 6h16M4 12h16M4 18h16"/>
-        </svg>
-      </button>
     </div>
   </header>
+  <div class="nav-backdrop" id="nav-backdrop" aria-hidden="true"></div>
 
   <main>
     <section class="hero">
@@ -1198,11 +1324,31 @@
       header.classList.toggle('is-scrolled', window.scrollY > 8);
     }, { passive: true });
 
-    menuToggle.addEventListener('click', function () {
-      closeThemePanel();
-      const open = header.classList.toggle('nav-open');
+    var navBackdrop = document.getElementById('nav-backdrop');
+
+    function setNavOpen(open) {
+      header.classList.toggle('nav-open', open);
       menuToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-    });
+      if (navBackdrop) {
+        navBackdrop.setAttribute('aria-hidden', open ? 'false' : 'true');
+      }
+      document.body.style.overflow = open ? 'hidden' : '';
+    }
+
+    if (menuToggle) {
+      menuToggle.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        closeThemePanel();
+        setNavOpen(!header.classList.contains('nav-open'));
+      });
+    }
+
+    if (navBackdrop) {
+      navBackdrop.addEventListener('click', function () {
+        setNavOpen(false);
+      });
+    }
 
     document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
       anchor.addEventListener('click', function (e) {
@@ -1211,8 +1357,7 @@
         e.preventDefault();
         const target = document.querySelector(href);
         if (target) {
-          header.classList.remove('nav-open');
-          menuToggle.setAttribute('aria-expanded', 'false');
+          setNavOpen(false);
           target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
       });
