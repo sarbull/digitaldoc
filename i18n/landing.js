@@ -1,15 +1,99 @@
 (function () {
   var LANG_KEY = 'digitaldoc-language';
   var SUPPORTED = ['ro', 'en'];
+  var GEO_TIMEOUT_MS = 3500;
 
-  function getStoredLanguage() {
+  function getSavedLanguage() {
     try {
       var raw = localStorage.getItem(LANG_KEY);
       if (raw === 'en' || raw === 'ro') return raw;
     } catch (_) {
       /* ignore */
     }
-    return 'ro';
+    return null;
+  }
+
+  /** Romania → ro; otherwise en (browser/timezone hints when geo is unavailable). */
+  function localeFromCountryCode(code) {
+    return code === 'RO' ? 'ro' : 'en';
+  }
+
+  function syncLocaleHint() {
+    var tz = '';
+    try {
+      tz = Intl.DateTimeFormat().resolvedOptions().timeZone || '';
+    } catch (_) {
+      /* ignore */
+    }
+    if (tz === 'Europe/Bucharest') return 'ro';
+
+    var langs = [navigator.language].concat(navigator.languages || []);
+    for (var i = 0; i < langs.length; i++) {
+      var tag = String(langs[i] || '').toLowerCase();
+      if (tag === 'ro' || tag.indexOf('ro-') === 0) return 'ro';
+    }
+    return 'en';
+  }
+
+  function fetchWithTimeout(url, options, timeoutMs) {
+    var controller = new AbortController();
+    var timer = setTimeout(function () {
+      controller.abort();
+    }, timeoutMs);
+    return fetch(url, Object.assign({}, options, { signal: controller.signal }))
+      .then(function (res) {
+        clearTimeout(timer);
+        return res;
+      })
+      .catch(function (err) {
+        clearTimeout(timer);
+        throw err;
+      });
+  }
+
+  function parseCloudflareTrace(text) {
+    var match = text.match(/^loc=([A-Z]{2})$/m);
+    return match ? match[1] : null;
+  }
+
+  function detectCountryCode() {
+    return fetchWithTimeout('https://www.cloudflare.com/cdn-cgi/trace', {}, GEO_TIMEOUT_MS)
+      .then(function (res) {
+        if (!res.ok) throw new Error('cf trace failed');
+        return res.text();
+      })
+      .then(function (text) {
+        var code = parseCloudflareTrace(text);
+        if (!code) throw new Error('cf trace missing loc');
+        return code;
+      })
+      .catch(function () {
+        return fetchWithTimeout('https://ipapi.co/country_code/', {}, GEO_TIMEOUT_MS).then(
+          function (res) {
+            if (!res.ok) throw new Error('ipapi failed');
+            return res.text();
+          }
+        );
+      })
+      .then(function (text) {
+        return String(text || '')
+          .trim()
+          .toUpperCase();
+      });
+  }
+
+  function detectDefaultLanguage() {
+    return detectCountryCode()
+      .then(localeFromCountryCode)
+      .catch(function () {
+        return syncLocaleHint();
+      });
+  }
+
+  function resolveInitialLanguage() {
+    var saved = getSavedLanguage();
+    if (saved) return Promise.resolve(saved);
+    return detectDefaultLanguage();
   }
 
   function getNested(obj, path) {
@@ -69,6 +153,13 @@
     });
   }
 
+  function applyLanguage(lang) {
+    if (SUPPORTED.indexOf(lang) === -1) return Promise.resolve();
+    return loadLocale(lang).then(function (dict) {
+      applyTranslations(dict, lang);
+    });
+  }
+
   function setLanguage(lang) {
     if (SUPPORTED.indexOf(lang) === -1) return Promise.resolve();
     try {
@@ -76,9 +167,7 @@
     } catch (_) {
       /* ignore */
     }
-    return loadLocale(lang).then(function (dict) {
-      applyTranslations(dict, lang);
-    });
+    return applyLanguage(lang);
   }
 
   function closeThemePanel() {
@@ -114,8 +203,10 @@
 
   document.addEventListener('DOMContentLoaded', function () {
     initLangSwitcher();
-    setLanguage(getStoredLanguage()).catch(function (err) {
-      console.error(err);
-    });
+    resolveInitialLanguage()
+      .then(applyLanguage)
+      .catch(function (err) {
+        console.error(err);
+      });
   });
 })();

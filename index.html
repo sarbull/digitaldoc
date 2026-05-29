@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ro">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <script>
@@ -8,7 +8,18 @@
       var lang = localStorage.getItem(langKey);
       if (lang === 'en' || lang === 'ro') {
         document.documentElement.lang = lang;
+        return;
       }
+      var tz = '';
+      try {
+        tz = Intl.DateTimeFormat().resolvedOptions().timeZone || '';
+      } catch (_) {}
+      var navLang = (navigator.language || '').toLowerCase();
+      var prefersRo =
+        tz === 'Europe/Bucharest' ||
+        navLang === 'ro' ||
+        navLang.indexOf('ro-') === 0;
+      document.documentElement.lang = prefersRo ? 'ro' : 'en';
     })();
   </script>
   <script>
@@ -1004,8 +1015,8 @@
       </div>
       <div class="header-bar-end">
         <div class="lang-switch" id="lang-switch" role="group" data-i18n-aria-label="a11y.language" aria-label="Limbă">
-          <button type="button" class="lang-switch__btn is-active" data-lang="ro" aria-pressed="true">RO</button>
-          <button type="button" class="lang-switch__btn" data-lang="en" aria-pressed="false">EN</button>
+          <button type="button" class="lang-switch__btn" data-lang="ro" aria-pressed="false">RO</button>
+          <button type="button" class="lang-switch__btn is-active" data-lang="en" aria-pressed="true">EN</button>
         </div>
         <div class="theme-menu" id="theme-menu">
           <button
