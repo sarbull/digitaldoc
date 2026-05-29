@@ -1,0 +1,143 @@
+{
+  "meta": {
+    "title": "Digitaldoc — Folders, documents, and secure sharing",
+    "description": "Digitaldoc: organize documents in folders, edit rich HTML content, preview PDFs, and share with clear roles. Sign in with Google or password."
+  },
+  "a11y": {
+    "logoHome": "Digitaldoc home",
+    "navMain": "Main",
+    "theme": "Theme",
+    "language": "Language",
+    "menu": "Menu",
+    "heroImage": "Screenshot of the Digitaldoc app: document view, folders, and editing actions"
+  },
+  "nav": {
+    "features": "Features",
+    "how": "How it works",
+    "forWhom": "Who it's for",
+    "pricing": "Pricing",
+    "contact": "Contact",
+    "signIn": "Sign in",
+    "getStarted": "Get started free"
+  },
+  "theme": {
+    "auto": "System",
+    "light": "Light",
+    "dark": "Dark"
+  },
+  "hero": {
+    "badge": "Cloud document management",
+    "title": "Folders, documents, and protected sharing",
+    "lead": "Organize contracts and files in folders, edit rich content, preview PDFs, and invite collaborators with clear roles — all in one app.",
+    "ctaPrimary": "Create a free account",
+    "ctaSecondary": "See features",
+    "pointAuth": "Google or password sign-in",
+    "pointLang": "Romanian and English interface",
+    "pointPdf": "Built-in PDF preview"
+  },
+  "features": {
+    "title": "Everything you need, without the clutter",
+    "subtitle": "Features available in the platform today — built for teams that work with documents every day.",
+    "folders": {
+      "title": "Nested folders",
+      "desc": "Structure documents in folder trees with role-based access: owner, moderator, editor, or reader."
+    },
+    "editor": {
+      "title": "Document editor",
+      "desc": "Visual HTML editor: formatted text, tables, images, Handlebars templates, and source mode for full pages."
+    },
+    "pdf": {
+      "title": "PDF preview",
+      "desc": "See how the exported document looks before you share it — fast rendering via a dedicated PDF service."
+    },
+    "sharing": {
+      "title": "Sharing with invitations",
+      "desc": "Invite collaborators to folders with a secure link and password. Accept the invite and work in the shared space right away."
+    },
+    "auth": {
+      "title": "Secure authentication",
+      "desc": "Local account with password or Google sign-in. JWT sessions and password reset by email."
+    },
+    "i18n": {
+      "title": "Romanian and English",
+      "desc": "The interface adapts to your language. API messages respect your locale preference."
+    }
+  },
+  "how": {
+    "title": "How it works",
+    "subtitle": "Three steps from a new account to a shared document.",
+    "step1": {
+      "title": "Create your structure",
+      "desc": "Add folders and documents. Each document can contain simple HTML or a full styled page."
+    },
+    "step2": {
+      "title": "Edit content",
+      "desc": "Use the visual editor or HTML source. Insert Handlebars variables for dynamic text in PDF export."
+    },
+    "step3": {
+      "title": "Share and preview",
+      "desc": "Invite colleagues to a folder, set roles, and check the PDF before sending the document onward."
+    }
+  },
+  "forWhom": {
+    "title": "Who is Digitaldoc for?",
+    "subtitle": "From schools and professional offices to teams that need a clear home for documents.",
+    "schools": {
+      "title": "Schools and institutions",
+      "desc": "Student lists, contracts, and official documents organized by class and school year — easy to update and export to PDF."
+    },
+    "legal": {
+      "title": "Notary and legal offices",
+      "desc": "Contracts, annexes, and deeds grouped by client or case file, with strict control over who can read or edit."
+    },
+    "photographers": {
+      "title": "Photographers",
+      "desc": "Keep contracts, briefs, and deliverables per client or event. Invite collaborators or clients to shared folders and verify the PDF before delivery."
+    },
+    "teams": {
+      "title": "Teams and professionals",
+      "desc": "One place for shared documents — no more folders lost in email or on USB drives."
+    }
+  },
+  "pricing": {
+    "title": "Pricing",
+    "subtitle": "Cloud for teams that want to start quickly; Enterprise for scale or custom needs.",
+    "cloud": {
+      "price": "<strong>32.5 RON</strong> · excl. VAT",
+      "title": "Cloud",
+      "desc": "Instant access, no servers to manage. Updates and backups handled for you.",
+      "f1": "Access from anywhere",
+      "f2": "Authentication and sharing included",
+      "f3": "Implementation support",
+      "tag": "Monthly subscription"
+    },
+    "enterprise": {
+      "badge": "Custom",
+      "title": "Enterprise",
+      "desc": "A solution tailored to your organization: volume, security, integrations, and custom workflows.",
+      "f1": "Dedicated setup and onboarding",
+      "f2": "Integrations with existing systems",
+      "f3": "SLA and priority support",
+      "tagHtml": "<a href=\"#contact\">Custom quote — contact us</a>"
+    }
+  },
+  "cta": {
+    "title": "Ready to organize your documents?",
+    "subtitle": "Open the app, create your first folder, and invite your team in minutes.",
+    "button": "Open the app"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Questions about a demo, Cloud, Enterprise, or partnership? Write to us.",
+    "namePlaceholder": "Your name",
+    "emailPlaceholder": "Email",
+    "messagePlaceholder": "Your message",
+    "submit": "Send message",
+    "success": "Thank you! Your message was sent — we'll get back to you soon."
+  },
+  "footer": {
+    "copyright": "© 2025 Digitaldoc. All rights reserved.",
+    "app": "App",
+    "signIn": "Sign in"
+  }
+}

@@ -1,0 +1,143 @@
+{
+  "meta": {
+    "title": "Digitaldoc — Dosare, documente și partajare sigură",
+    "description": "Digitaldoc: organizează documente în foldere, editează conținut HTML, previzualizează PDF și partajează cu roluri clare. Autentificare Google sau parolă."
+  },
+  "a11y": {
+    "logoHome": "Digitaldoc acasă",
+    "navMain": "Principal",
+    "theme": "Temă",
+    "language": "Limbă",
+    "menu": "Meniu",
+    "heroImage": "Captură din aplicația Digitaldoc: vizualizare document, foldere și acțiuni de editare"
+  },
+  "nav": {
+    "features": "Funcționalități",
+    "how": "Cum funcționează",
+    "forWhom": "Pentru cine",
+    "pricing": "Prețuri",
+    "contact": "Contact",
+    "signIn": "Autentificare",
+    "getStarted": "Începe gratuit"
+  },
+  "theme": {
+    "auto": "Sistem",
+    "light": "Luminos",
+    "dark": "Întunecat"
+  },
+  "hero": {
+    "badge": "Management documentar în cloud",
+    "title": "Dosare, documente și partajare protejată",
+    "lead": "Organizează contracte și fișiere în foldere, editează conținut bogat, previzualizează PDF și invită colaboratori cu roluri clare — totul într-o singură aplicație.",
+    "ctaPrimary": "Creează cont gratuit",
+    "ctaSecondary": "Vezi funcționalitățile",
+    "pointAuth": "Autentificare Google sau parolă",
+    "pointLang": "Interfață în română și engleză",
+    "pointPdf": "Previzualizare PDF integrată"
+  },
+  "features": {
+    "title": "Tot ce ai nevoie, fără complicații",
+    "subtitle": "Funcționalități disponibile acum în platformă — construite pentru echipe care lucrează zilnic cu documente.",
+    "folders": {
+      "title": "Foldere ierarhice",
+      "desc": "Structurează documentele în arbori de foldere, cu acces pe roluri: proprietar, moderator, editor sau cititor."
+    },
+    "editor": {
+      "title": "Editor de documente",
+      "desc": "Editor vizual pentru HTML: text formatat, tabele, imagini, șabloane Handlebars și mod sursă pentru pagini complete."
+    },
+    "pdf": {
+      "title": "Previzualizare PDF",
+      "desc": "Vezi cum arată documentul exportat înainte de a-l partaja — randare rapidă prin serviciul dedicat PDF."
+    },
+    "sharing": {
+      "title": "Partajare cu invitații",
+      "desc": "Invită colaboratori pe foldere cu link securizat și parolă. Acceptă invitația și lucrează imediat în spațiul partajat."
+    },
+    "auth": {
+      "title": "Autentificare sigură",
+      "desc": "Cont local cu parolă sau autentificare Google. Sesiuni JWT și resetare parolă prin email."
+    },
+    "i18n": {
+      "title": "Română și engleză",
+      "desc": "Interfața se adaptează limbii tale. Mesajele API respectă preferința de localizare."
+    }
+  },
+  "how": {
+    "title": "Cum funcționează",
+    "subtitle": "Trei pași de la cont nou la document partajat.",
+    "step1": {
+      "title": "Creezi structura",
+      "desc": "Adaugi foldere și documente. Fiecare document poate conține HTML simplu sau o pagină completă cu stiluri."
+    },
+    "step2": {
+      "title": "Editezi conținutul",
+      "desc": "Folosești editorul vizual sau sursa HTML. Inserezi variabile Handlebars pentru text dinamic la export PDF."
+    },
+    "step3": {
+      "title": "Partajezi și previzualizezi",
+      "desc": "Inviți colegii pe folder, setezi roluri și verifici PDF-ul înainte de a trimite documentul mai departe."
+    }
+  },
+  "forWhom": {
+    "title": "Pentru cine este Digitaldoc?",
+    "subtitle": "De la școli și birouri profesionale la echipe care au nevoie de un loc clar pentru documente.",
+    "schools": {
+      "title": "Școli și instituții",
+      "desc": "Liste de elevi, contracte și documente oficiale organizate pe clase și ani școlari, ușor de actualizat și exportat în PDF."
+    },
+    "legal": {
+      "title": "Birouri notariale și juridice",
+      "desc": "Contracte, anexe și acte grupate pe client sau dosar, cu control strict asupra cine poate citi sau modifica."
+    },
+    "photographers": {
+      "title": "Fotografi",
+      "desc": "Ține contractele, brief-urile și livrabilele pe client sau eveniment. Invită colaboratori sau clienți în foldere partajate și verifică PDF-ul înainte de livrare."
+    },
+    "teams": {
+      "title": "Echipe și profesioniști",
+      "desc": "Un singur spațiu pentru documente partajate, fără foldere pierdute pe email sau stick-uri USB."
+    }
+  },
+  "pricing": {
+    "title": "Modele de plată",
+    "subtitle": "Cloud pentru echipe care vor să înceapă rapid, Enterprise pentru nevoi la scară sau personalizate.",
+    "cloud": {
+      "price": "<strong>32,5 RON</strong> · fără TVA",
+      "title": "Cloud",
+      "desc": "Acces imediat, fără servere de administrat. Actualizări și backup gestionate pentru tine.",
+      "f1": "Acces de oriunde",
+      "f2": "Autentificare și partajare incluse",
+      "f3": "Suport la implementare",
+      "tag": "Abonament lunar"
+    },
+    "enterprise": {
+      "badge": "Personalizat",
+      "title": "Enterprise",
+      "desc": "Soluție adaptată organizației tale: volum, securitate, integrări și fluxuri de lucru la comandă.",
+      "f1": "Configurare și onboarding dedicat",
+      "f2": "Integrări cu sistemele existente",
+      "f3": "SLA și suport prioritar",
+      "tagHtml": "<a href=\"#contact\">Ofertă personalizată — contactează-ne</a>"
+    }
+  },
+  "cta": {
+    "title": "Gata să îți organizezi documentele?",
+    "subtitle": "Intră în aplicație, creează primul folder și invită echipa în câteva minute.",
+    "button": "Deschide aplicația"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Întrebări despre demo, Cloud, Enterprise sau parteneriat? Scrie-ne.",
+    "namePlaceholder": "Numele tău",
+    "emailPlaceholder": "Email",
+    "messagePlaceholder": "Mesajul tău",
+    "submit": "Trimite mesajul",
+    "success": "Mulțumim! Mesajul a fost trimis — revenim în curând."
+  },
+  "footer": {
+    "copyright": "© 2025 Digitaldoc. Toate drepturile rezervate.",
+    "app": "Aplicație",
+    "signIn": "Autentificare"
+  }
+}

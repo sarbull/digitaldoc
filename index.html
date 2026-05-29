@@ -4,6 +4,15 @@
   <meta charset="UTF-8">
   <script>
     (function () {
+      var langKey = 'digitaldoc-language';
+      var lang = localStorage.getItem(langKey);
+      if (lang === 'en' || lang === 'ro') {
+        document.documentElement.lang = lang;
+      }
+    })();
+  </script>
+  <script>
+    (function () {
       var key = 'digitaldoc-color-scheme';
       var pref = localStorage.getItem(key);
       if (pref !== 'light' && pref !== 'dark' && pref !== 'auto') pref = 'auto';
@@ -280,6 +289,41 @@
       background: var(--brand-soft);
       color: var(--brand);
       font-weight: 600;
+    }
+
+    .lang-switch {
+      display: inline-flex;
+      align-items: center;
+      padding: 2px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: var(--switcher-bg);
+      flex-shrink: 0;
+    }
+
+    .lang-switch__btn {
+      min-width: 2.25rem;
+      padding: 0.3rem 0.55rem;
+      border: none;
+      border-radius: 999px;
+      background: transparent;
+      color: var(--text-muted);
+      font-family: inherit;
+      font-size: 0.75rem;
+      font-weight: 600;
+      line-height: 1;
+      cursor: pointer;
+      transition: background 0.15s, color 0.15s;
+    }
+
+    .lang-switch__btn:hover {
+      color: var(--brand);
+    }
+
+    .lang-switch__btn.is-active {
+      background: var(--switcher-active-bg);
+      color: var(--brand);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
     }
 
     .btn {
@@ -940,30 +984,35 @@
 <body>
   <header class="site-header" id="header">
     <div class="container header-inner">
-      <a href="https://www.digitaldoc.ro" class="logo-link" aria-label="Digitaldoc acasă">
+      <a href="https://www.digitaldoc.ro" class="logo-link" data-i18n-aria-label="a11y.logoHome" aria-label="Digitaldoc acasă">
         <img src="digitaldoc.svg" alt="">
       </a>
       <div class="header-nav-panel" id="header-nav-panel">
-        <nav aria-label="Principal">
+        <nav data-i18n-aria-label="a11y.navMain" aria-label="Principal">
           <ul class="nav-links" id="nav-links">
-            <li><a href="#features">Funcționalități</a></li>
-            <li><a href="#how">Cum funcționează</a></li>
-            <li><a href="#for-whom">Pentru cine</a></li>
-            <li><a href="#pricing">Prețuri</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#features" data-i18n="nav.features">Funcționalități</a></li>
+            <li><a href="#how" data-i18n="nav.how">Cum funcționează</a></li>
+            <li><a href="#for-whom" data-i18n="nav.forWhom">Pentru cine</a></li>
+            <li><a href="#pricing" data-i18n="nav.pricing">Prețuri</a></li>
+            <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
           </ul>
         </nav>
         <div class="header-cta">
-          <a href="https://aplicatia.digitaldoc.ro/login" class="btn btn-ghost">Autentificare</a>
-          <a href="https://aplicatia.digitaldoc.ro/register" class="btn btn-primary">Începe gratuit</a>
+          <a href="https://aplicatia.digitaldoc.ro/login" class="btn btn-ghost" data-i18n="nav.signIn">Autentificare</a>
+          <a href="https://aplicatia.digitaldoc.ro/register" class="btn btn-primary" data-i18n="nav.getStarted">Începe gratuit</a>
         </div>
       </div>
       <div class="header-bar-end">
+        <div class="lang-switch" id="lang-switch" role="group" data-i18n-aria-label="a11y.language" aria-label="Limbă">
+          <button type="button" class="lang-switch__btn is-active" data-lang="ro" aria-pressed="true">RO</button>
+          <button type="button" class="lang-switch__btn" data-lang="en" aria-pressed="false">EN</button>
+        </div>
         <div class="theme-menu" id="theme-menu">
           <button
             type="button"
             class="icon-btn theme-menu__trigger"
             id="theme-trigger"
+            data-i18n-aria-label="a11y.theme"
             aria-label="Temă"
             aria-haspopup="listbox"
             aria-expanded="false"
@@ -976,13 +1025,13 @@
               <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
             </svg>
           </button>
-          <ul class="theme-menu__panel" id="theme-panel" role="listbox" aria-label="Temă" hidden>
-            <li><button type="button" class="theme-menu__option" role="option" data-theme-value="auto">Sistem</button></li>
-            <li><button type="button" class="theme-menu__option" role="option" data-theme-value="light">Luminos</button></li>
-            <li><button type="button" class="theme-menu__option" role="option" data-theme-value="dark">Întunecat</button></li>
+          <ul class="theme-menu__panel" id="theme-panel" role="listbox" data-i18n-aria-label="a11y.theme" aria-label="Temă" hidden>
+            <li><button type="button" class="theme-menu__option" role="option" data-theme-value="auto" data-i18n="theme.auto">Sistem</button></li>
+            <li><button type="button" class="theme-menu__option" role="option" data-theme-value="light" data-i18n="theme.light">Luminos</button></li>
+            <li><button type="button" class="theme-menu__option" role="option" data-theme-value="dark" data-i18n="theme.dark">Întunecat</button></li>
           </ul>
         </div>
-        <button type="button" class="icon-btn menu-toggle" id="menu-toggle" aria-label="Meniu" aria-expanded="false" aria-controls="header-nav-panel">
+        <button type="button" class="icon-btn menu-toggle" id="menu-toggle" data-i18n-aria-label="a11y.menu" aria-label="Meniu" aria-expanded="false" aria-controls="header-nav-panel">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
             <path d="M4 6h16M4 12h16M4 18h16"/>
           </svg>
@@ -997,34 +1046,35 @@
       <div class="hero-bg" aria-hidden="true"></div>
       <div class="container hero-grid">
         <div class="hero-copy">
-          <span class="hero-badge">Management documentar în cloud</span>
-          <h1>Dosare, documente și partajare protejată</h1>
-          <p class="hero-lead">
+          <span class="hero-badge" data-i18n="hero.badge">Management documentar în cloud</span>
+          <h1 data-i18n="hero.title">Dosare, documente și partajare protejată</h1>
+          <p class="hero-lead" data-i18n="hero.lead">
             Organizează contracte și fișiere în foldere, editează conținut bogat,
             previzualizează PDF și invită colaboratori cu roluri clare — totul într-o singură aplicație.
           </p>
           <div class="hero-actions">
-            <a href="https://aplicatia.digitaldoc.ro/register" class="btn btn-primary btn-lg">Creează cont gratuit</a>
-            <a href="#features" class="btn btn-ghost btn-lg">Vezi funcționalitățile</a>
+            <a href="https://aplicatia.digitaldoc.ro/register" class="btn btn-primary btn-lg" data-i18n="hero.ctaPrimary">Creează cont gratuit</a>
+            <a href="#features" class="btn btn-ghost btn-lg" data-i18n="hero.ctaSecondary">Vezi funcționalitățile</a>
           </div>
           <ul class="hero-points">
             <li>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
-              Autentificare Google sau parolă
+              <span data-i18n="hero.pointAuth">Autentificare Google sau parolă</span>
             </li>
             <li>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
-              Interfață în română și engleză
+              <span data-i18n="hero.pointLang">Interfață în română și engleză</span>
             </li>
             <li>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
-              Previzualizare PDF integrată
+              <span data-i18n="hero.pointPdf">Previzualizare PDF integrată</span>
             </li>
           </ul>
         </div>
         <figure class="hero-visual">
           <img
             src="demo-document-1.png"
+            data-i18n-alt="a11y.heroImage"
             alt="Captură din aplicația Digitaldoc: vizualizare document, foldere și acțiuni de editare"
             width="1372"
             height="772"
@@ -1038,51 +1088,51 @@
     <section id="features" class="surface-alt">
       <div class="container">
         <div class="section-head">
-          <h2>Tot ce ai nevoie, fără complicații</h2>
-          <p>Funcționalități disponibile acum în platformă — construite pentru echipe care lucrează zilnic cu documente.</p>
+          <h2 data-i18n="features.title">Tot ce ai nevoie, fără complicații</h2>
+          <p data-i18n="features.subtitle">Funcționalități disponibile acum în platformă — construite pentru echipe care lucrează zilnic cu documente.</p>
         </div>
         <div class="features-grid">
           <article class="feature-card">
             <div class="feature-icon" aria-hidden="true">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"/></svg>
             </div>
-            <h3>Foldere ierarhice</h3>
-            <p>Structurează documentele în arbori de foldere, cu acces pe roluri: proprietar, moderator, editor sau cititor.</p>
+            <h3 data-i18n="features.folders.title">Foldere ierarhice</h3>
+            <p data-i18n="features.folders.desc">Structurează documentele în arbori de foldere, cu acces pe roluri: proprietar, moderator, editor sau cititor.</p>
           </article>
           <article class="feature-card">
             <div class="feature-icon" aria-hidden="true">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.12 2.12 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
             </div>
-            <h3>Editor de documente</h3>
-            <p>Editor vizual pentru HTML: text formatat, tabele, imagini, șabloane Handlebars și mod sursă pentru pagini complete.</p>
+            <h3 data-i18n="features.editor.title">Editor de documente</h3>
+            <p data-i18n="features.editor.desc">Editor vizual pentru HTML: text formatat, tabele, imagini, șabloane Handlebars și mod sursă pentru pagini complete.</p>
           </article>
           <article class="feature-card">
             <div class="feature-icon" aria-hidden="true">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
             </div>
-            <h3>Previzualizare PDF</h3>
-            <p>Vezi cum arată documentul exportat înainte de a-l partaja — randare rapidă prin serviciul dedicat PDF.</p>
+            <h3 data-i18n="features.pdf.title">Previzualizare PDF</h3>
+            <p data-i18n="features.pdf.desc">Vezi cum arată documentul exportat înainte de a-l partaja — randare rapidă prin serviciul dedicat PDF.</p>
           </article>
           <article class="feature-card">
             <div class="feature-icon" aria-hidden="true">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
             </div>
-            <h3>Partajare cu invitații</h3>
-            <p>Invită colaboratori pe foldere cu link securizat și parolă. Acceptă invitația și lucrează imediat în spațiul partajat.</p>
+            <h3 data-i18n="features.sharing.title">Partajare cu invitații</h3>
+            <p data-i18n="features.sharing.desc">Invită colaboratori pe foldere cu link securizat și parolă. Acceptă invitația și lucrează imediat în spațiul partajat.</p>
           </article>
           <article class="feature-card">
             <div class="feature-icon" aria-hidden="true">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
             </div>
-            <h3>Autentificare sigură</h3>
-            <p>Cont local cu parolă sau autentificare Google. Sesiuni JWT și resetare parolă prin email.</p>
+            <h3 data-i18n="features.auth.title">Autentificare sigură</h3>
+            <p data-i18n="features.auth.desc">Cont local cu parolă sau autentificare Google. Sesiuni JWT și resetare parolă prin email.</p>
           </article>
           <article class="feature-card">
             <div class="feature-icon" aria-hidden="true">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
             </div>
-            <h3>Română și engleză</h3>
-            <p>Interfața se adaptează limbii tale. Mesajele API respectă preferința de localizare.</p>
+            <h3 data-i18n="features.i18n.title">Română și engleză</h3>
+            <p data-i18n="features.i18n.desc">Interfața se adaptează limbii tale. Mesajele API respectă preferința de localizare.</p>
           </article>
         </div>
       </div>
@@ -1091,24 +1141,24 @@
     <section id="how">
       <div class="container">
         <div class="section-head">
-          <h2>Cum funcționează</h2>
-          <p>Trei pași de la cont nou la document partajat.</p>
+          <h2 data-i18n="how.title">Cum funcționează</h2>
+          <p data-i18n="how.subtitle">Trei pași de la cont nou la document partajat.</p>
         </div>
         <div class="steps">
           <div class="step">
             <div class="step-num">1</div>
-            <h3>Creezi structura</h3>
-            <p>Adaugi foldere și documente. Fiecare document poate conține HTML simplu sau o pagină completă cu stiluri.</p>
+            <h3 data-i18n="how.step1.title">Creezi structura</h3>
+            <p data-i18n="how.step1.desc">Adaugi foldere și documente. Fiecare document poate conține HTML simplu sau o pagină completă cu stiluri.</p>
           </div>
           <div class="step">
             <div class="step-num">2</div>
-            <h3>Editezi conținutul</h3>
-            <p>Folosești editorul vizual sau sursa HTML. Inserezi variabile Handlebars pentru text dinamic la export PDF.</p>
+            <h3 data-i18n="how.step2.title">Editezi conținutul</h3>
+            <p data-i18n="how.step2.desc">Folosești editorul vizual sau sursa HTML. Inserezi variabile Handlebars pentru text dinamic la export PDF.</p>
           </div>
           <div class="step">
             <div class="step-num">3</div>
-            <h3>Partajezi și previzualizezi</h3>
-            <p>Inviți colegii pe folder, setezi roluri și verifici PDF-ul înainte de a trimite documentul mai departe.</p>
+            <h3 data-i18n="how.step3.title">Partajezi și previzualizezi</h3>
+            <p data-i18n="how.step3.desc">Inviți colegii pe folder, setezi roluri și verifici PDF-ul înainte de a trimite documentul mai departe.</p>
           </div>
         </div>
       </div>
@@ -1117,8 +1167,8 @@
     <section id="for-whom" class="surface-alt">
       <div class="container">
         <div class="section-head">
-          <h2>Pentru cine este Digitaldoc?</h2>
-          <p>De la școli și birouri profesionale la echipe care au nevoie de un loc clar pentru documente.</p>
+          <h2 data-i18n="forWhom.title">Pentru cine este Digitaldoc?</h2>
+          <p data-i18n="forWhom.subtitle">De la școli și birouri profesionale la echipe care au nevoie de un loc clar pentru documente.</p>
         </div>
         <div class="audience-grid">
           <article class="audience-card">
@@ -1126,8 +1176,8 @@
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
             </div>
             <div>
-              <h3>Școli și instituții</h3>
-              <p>Liste de elevi, contracte și documente oficiale organizate pe clase și ani școlari, ușor de actualizat și exportat în PDF.</p>
+              <h3 data-i18n="forWhom.schools.title">Școli și instituții</h3>
+              <p data-i18n="forWhom.schools.desc">Liste de elevi, contracte și documente oficiale organizate pe clase și ani școlari, ușor de actualizat și exportat în PDF.</p>
             </div>
           </article>
           <article class="audience-card">
@@ -1135,8 +1185,8 @@
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v18M3 9h18M8 15h8M8 21h8"/></svg>
             </div>
             <div>
-              <h3>Birouri notariale și juridice</h3>
-              <p>Contracte, anexe și acte grupate pe client sau dosar, cu control strict asupra cine poate citi sau modifica.</p>
+              <h3 data-i18n="forWhom.legal.title">Birouri notariale și juridice</h3>
+              <p data-i18n="forWhom.legal.desc">Contracte, anexe și acte grupate pe client sau dosar, cu control strict asupra cine poate citi sau modifica.</p>
             </div>
           </article>
           <article class="audience-card">
@@ -1144,8 +1194,8 @@
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg>
             </div>
             <div>
-              <h3>Fotografi</h3>
-              <p>Ține contractele, brief-urile și livrabilele pe client sau eveniment. Invită colaboratori sau clienți în foldere partajate și verifică PDF-ul înainte de livrare.</p>
+              <h3 data-i18n="forWhom.photographers.title">Fotografi</h3>
+              <p data-i18n="forWhom.photographers.desc">Ține contractele, brief-urile și livrabilele pe client sau eveniment. Invită colaboratori sau clienți în foldere partajate și verifică PDF-ul înainte de livrare.</p>
             </div>
           </article>
           <article class="audience-card">
@@ -1153,8 +1203,8 @@
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/></svg>
             </div>
             <div>
-              <h3>Echipe și profesioniști</h3>
-              <p>Un singur spațiu pentru documente partajate, fără foldere pierdute pe email sau stick-uri USB.</p>
+              <h3 data-i18n="forWhom.teams.title">Echipe și profesioniști</h3>
+              <p data-i18n="forWhom.teams.desc">Un singur spațiu pentru documente partajate, fără foldere pierdute pe email sau stick-uri USB.</p>
             </div>
           </article>
         </div>
@@ -1164,31 +1214,31 @@
     <section id="pricing">
       <div class="container">
         <div class="section-head">
-          <h2>Modele de plată</h2>
-          <p>Cloud pentru echipe care vor să înceapă rapid, Enterprise pentru nevoi la scară sau personalizate.</p>
+          <h2 data-i18n="pricing.title">Modele de plată</h2>
+          <p data-i18n="pricing.subtitle">Cloud pentru echipe care vor să înceapă rapid, Enterprise pentru nevoi la scară sau personalizate.</p>
         </div>
         <div class="pricing-grid">
           <article class="pricing-card">
-            <span class="pricing-badge pricing-badge--price"><strong>32,5 RON</strong> · fără TVA</span>
-            <h3>Cloud</h3>
-            <p class="pricing-desc">Acces imediat, fără servere de administrat. Actualizări și backup gestionate pentru tine.</p>
+            <span class="pricing-badge pricing-badge--price" data-i18n-html="pricing.cloud.price"><strong>32,5 RON</strong> · fără TVA</span>
+            <h3 data-i18n="pricing.cloud.title">Cloud</h3>
+            <p class="pricing-desc" data-i18n="pricing.cloud.desc">Acces imediat, fără servere de administrat. Actualizări și backup gestionate pentru tine.</p>
             <ul class="pricing-features">
-              <li>Acces de oriunde</li>
-              <li>Autentificare și partajare incluse</li>
-              <li>Suport la implementare</li>
+              <li data-i18n="pricing.cloud.f1">Acces de oriunde</li>
+              <li data-i18n="pricing.cloud.f2">Autentificare și partajare incluse</li>
+              <li data-i18n="pricing.cloud.f3">Suport la implementare</li>
             </ul>
-            <span class="pricing-tag">Abonament lunar</span>
+            <span class="pricing-tag" data-i18n="pricing.cloud.tag">Abonament lunar</span>
           </article>
           <article class="pricing-card featured">
-            <span class="pricing-badge">Personalizat</span>
-            <h3>Enterprise</h3>
-            <p class="pricing-desc">Soluție adaptată organizației tale: volum, securitate, integrări și fluxuri de lucru la comandă.</p>
+            <span class="pricing-badge" data-i18n="pricing.enterprise.badge">Personalizat</span>
+            <h3 data-i18n="pricing.enterprise.title">Enterprise</h3>
+            <p class="pricing-desc" data-i18n="pricing.enterprise.desc">Soluție adaptată organizației tale: volum, securitate, integrări și fluxuri de lucru la comandă.</p>
             <ul class="pricing-features">
-              <li>Configurare și onboarding dedicat</li>
-              <li>Integrări cu sistemele existente</li>
-              <li>SLA și suport prioritar</li>
+              <li data-i18n="pricing.enterprise.f1">Configurare și onboarding dedicat</li>
+              <li data-i18n="pricing.enterprise.f2">Integrări cu sistemele existente</li>
+              <li data-i18n="pricing.enterprise.f3">SLA și suport prioritar</li>
             </ul>
-            <span class="pricing-tag"><a href="#contact">Ofertă personalizată — contactează-ne</a></span>
+            <span class="pricing-tag" data-i18n-html="pricing.enterprise.tagHtml"><a href="#contact">Ofertă personalizată — contactează-ne</a></span>
           </article>
         </div>
       </div>
@@ -1196,26 +1246,26 @@
 
     <section class="cta-band">
       <div class="container">
-        <h2>Gata să îți organizezi documentele?</h2>
-        <p>Intră în aplicație, creează primul folder și invită echipa în câteva minute.</p>
-        <a href="https://aplicatia.digitaldoc.ro/register" class="btn btn-primary btn-lg">Deschide aplicația</a>
+        <h2 data-i18n="cta.title">Gata să îți organizezi documentele?</h2>
+        <p data-i18n="cta.subtitle">Intră în aplicație, creează primul folder și invită echipa în câteva minute.</p>
+        <a href="https://aplicatia.digitaldoc.ro/register" class="btn btn-primary btn-lg" data-i18n="cta.button">Deschide aplicația</a>
       </div>
     </section>
 
     <section id="contact">
       <div class="container">
         <div class="section-head">
-          <h2>Contact</h2>
-          <p>Întrebări despre demo, Cloud, Enterprise sau parteneriat? Scrie-ne.</p>
+          <h2 data-i18n="contact.title">Contact</h2>
+          <p data-i18n="contact.subtitle">Întrebări despre demo, Cloud, Enterprise sau parteneriat? Scrie-ne.</p>
         </div>
         <div class="contact-wrap">
           <form class="contact-form" id="contact-form" action="https://api.web3forms.com/submit" method="POST">
             <input type="hidden" name="access_key" value="8407bdae-870d-4dec-b698-444777d9890c">
-            <input type="text" name="name" placeholder="Numele tău" required autocomplete="name">
-            <input type="email" name="email" placeholder="Email" required autocomplete="email">
-            <textarea name="message" placeholder="Mesajul tău" required></textarea>
-            <button type="submit">Trimite mesajul</button>
-            <div class="form-success" id="form-success">
+            <input type="text" name="name" data-i18n-placeholder="contact.namePlaceholder" placeholder="Numele tău" required autocomplete="name">
+            <input type="email" name="email" data-i18n-placeholder="contact.emailPlaceholder" placeholder="Email" required autocomplete="email">
+            <textarea name="message" data-i18n-placeholder="contact.messagePlaceholder" placeholder="Mesajul tău" required></textarea>
+            <button type="submit" data-i18n="contact.submit">Trimite mesajul</button>
+            <div class="form-success" id="form-success" data-i18n="contact.success">
               Mulțumim! Mesajul a fost trimis — revenim în curând.
             </div>
           </form>
@@ -1226,15 +1276,16 @@
 
   <footer class="footer">
     <div class="container footer-inner">
-      <p>&copy; 2025 Digitaldoc. Toate drepturile rezervate.</p>
+      <p data-i18n="footer.copyright">&copy; 2025 Digitaldoc. Toate drepturile rezervate.</p>
       <ul class="footer-links">
-        <li><a href="https://aplicatia.digitaldoc.ro">Aplicație</a></li>
-        <li><a href="https://aplicatia.digitaldoc.ro/login">Autentificare</a></li>
+        <li><a href="https://aplicatia.digitaldoc.ro" data-i18n="footer.app">Aplicație</a></li>
+        <li><a href="https://aplicatia.digitaldoc.ro/login" data-i18n="footer.signIn">Autentificare</a></li>
         <li><a href="mailto:contact@mg.digitaldoc.ro">contact@mg.digitaldoc.ro</a></li>
       </ul>
     </div>
   </footer>
 
+  <script src="i18n/landing.js" defer></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-H8D41LK489"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
