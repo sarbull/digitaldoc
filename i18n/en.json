@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Digitaldoc — Folders, documents, and secure sharing",
-    "description": "Digitaldoc: organize documents in folders, edit rich HTML content, preview PDFs, and share with clear roles. Sign in with Google or password."
+    "description": "Digitaldoc: organize documents in folders, edit rich document content, preview PDFs, and share with clear roles. Sign in with Google or password."
   },
   "a11y": {
     "logoHome": "Digitaldoc home",
@@ -44,7 +44,7 @@
     },
     "editor": {
       "title": "Document editor",
-      "desc": "Visual HTML editor: formatted text, tables, images, Handlebars templates, and source mode for full pages."
+      "desc": "Visual editor: formatted text, tables, images, customizable templates, and advanced mode for full pages."
     },
     "pdf": {
       "title": "PDF preview",
@@ -56,7 +56,7 @@
     },
     "auth": {
       "title": "Secure authentication",
-      "desc": "Local account with password or Google sign-in. JWT sessions and password reset by email."
+      "desc": "Local account with password or Google sign-in. Secure sessions and password reset by email."
     },
     "i18n": {
       "title": "Romanian and English",
@@ -68,11 +68,11 @@
     "subtitle": "Three steps from a new account to a shared document.",
     "step1": {
       "title": "Create your structure",
-      "desc": "Add folders and documents. Each document can contain simple HTML or a full styled page."
+      "desc": "Add folders and documents. Each document can contain simple content or a full styled page."
     },
     "step2": {
       "title": "Edit content",
-      "desc": "Use the visual editor or HTML source. Insert Handlebars variables for dynamic text in PDF export."
+      "desc": "Use the visual editor or advanced mode. Insert fields and variables for dynamic text in PDF export."
     },
     "step3": {
       "title": "Share and preview",

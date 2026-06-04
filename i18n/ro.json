@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Digitaldoc — Dosare, documente și partajare sigură",
-    "description": "Digitaldoc: organizează documente în foldere, editează conținut HTML, previzualizează PDF și partajează cu roluri clare. Autentificare Google sau parolă."
+    "description": "Digitaldoc: organizează documente în foldere, editează conținut bogat, previzualizează PDF și partajează cu roluri clare. Autentificare Google sau parolă."
   },
   "a11y": {
     "logoHome": "Digitaldoc acasă",
@@ -44,7 +44,7 @@
     },
     "editor": {
       "title": "Editor de documente",
-      "desc": "Editor vizual pentru HTML: text formatat, tabele, imagini, șabloane Handlebars și mod sursă pentru pagini complete."
+      "desc": "Editor vizual: text formatat, tabele, imagini, șabloane personalizabile și mod avansat pentru pagini complete."
     },
     "pdf": {
       "title": "Previzualizare PDF",
@@ -56,7 +56,7 @@
     },
     "auth": {
       "title": "Autentificare sigură",
-      "desc": "Cont local cu parolă sau autentificare Google. Sesiuni JWT și resetare parolă prin email."
+      "desc": "Cont local cu parolă sau autentificare Google. Sesiuni securizate și resetare parolă prin email."
     },
     "i18n": {
       "title": "Română și engleză",
@@ -68,11 +68,11 @@
     "subtitle": "Trei pași de la cont nou la document partajat.",
     "step1": {
       "title": "Creezi structura",
-      "desc": "Adaugi foldere și documente. Fiecare document poate conține HTML simplu sau o pagină completă cu stiluri."
+      "desc": "Adaugi foldere și documente. Fiecare document poate conține conținut simplu sau o pagină completă cu stiluri."
     },
     "step2": {
       "title": "Editezi conținutul",
-      "desc": "Folosești editorul vizual sau sursa HTML. Inserezi variabile Handlebars pentru text dinamic la export PDF."
+      "desc": "Folosești editorul vizual sau modul avansat. Inserezi câmpuri și variabile pentru text dinamic la export PDF."
     },
     "step3": {
       "title": "Partajezi și previzualizezi",
