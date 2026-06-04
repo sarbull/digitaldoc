@@ -138,6 +138,7 @@
   "footer": {
     "copyright": "© 2025 Digitaldoc. All rights reserved.",
     "app": "App",
-    "signIn": "Sign in"
+    "signIn": "Sign in",
+    "terms": "Terms and conditions"
   }
 }
