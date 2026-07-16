@@ -101,15 +101,24 @@
   },
   "pricing": {
     "title": "Modele de plată",
-    "subtitle": "Cloud pentru echipe care vor să înceapă rapid, Enterprise pentru nevoi la scară sau personalizate.",
-    "cloud": {
-      "price": "<strong>32,5 RON</strong> · fără TVA",
-      "title": "Cloud",
-      "desc": "Acces imediat, fără servere de administrat. Actualizări și backup gestionate pentru tine.",
-      "f1": "Acces de oriunde",
-      "f2": "Autentificare și partajare incluse",
-      "f3": "Suport la implementare",
-      "tag": "Abonament lunar"
+    "subtitle": "Începe gratuit, treci pe Plătit pentru funcționalități Cloud, sau discută cu noi pentru Enterprise.",
+    "free": {
+      "price": "<strong>0 RON</strong>",
+      "title": "Gratuit",
+      "desc": "Spațiul de lucru de bază pentru foldere, documente și partajare sigură.",
+      "f1": "Foldere, documente și previzualizare PDF",
+      "f2": "Câmpuri de bază: text, parolă, telefon, email, număr și dată",
+      "f3": "Autentificare și partajare cu roluri incluse",
+      "tag": "Pentru început și uz curent"
+    },
+    "paid": {
+      "price": "<strong>35 RON</strong> · fără TVA / lună",
+      "title": "Plătit",
+      "desc": "Digitaldoc Cloud pentru echipe care au nevoie de câmpuri avansate și module conectate.",
+      "f1": "Toate tipurile de câmpuri și liste infinite",
+      "f2": "DigiStorage, surse de date și filtre",
+      "f3": "Reînnoire lunară automată, cu anulare oricând",
+      "tag": "Abonament Digitaldoc Cloud"
     },
     "enterprise": {
       "badge": "Personalizat",
@@ -128,7 +137,7 @@
   },
   "contact": {
     "title": "Contact",
-    "subtitle": "Întrebări despre demo, Cloud, Enterprise sau parteneriat? Scrie-ne.",
+    "subtitle": "Întrebări despre demo, Plătit, Enterprise sau parteneriat? Scrie-ne.",
     "namePlaceholder": "Numele tău",
     "emailPlaceholder": "Email",
     "messagePlaceholder": "Mesajul tău",

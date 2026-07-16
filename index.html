@@ -631,9 +631,9 @@
     /* Pricing */
     .pricing-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 1.5rem;
-      max-width: 800px;
+      max-width: 1040px;
       margin: 0 auto;
     }
 
@@ -695,18 +695,18 @@
     }
 
     .pricing-features li {
+      display: grid;
+      grid-template-columns: 6px 1fr;
+      align-items: center;
+      gap: 0.9rem;
       padding: 0.4rem 0;
       font-size: 0.9rem;
+      line-height: 1.4;
       color: var(--text-muted);
-      padding-left: 1.5rem;
-      position: relative;
     }
 
     .pricing-features li::before {
       content: "";
-      position: absolute;
-      left: 0;
-      top: 0.65rem;
       width: 6px;
       height: 6px;
       background: var(--brand);
@@ -1193,7 +1193,7 @@
           </article>
           <article class="audience-card">
             <div class="feature-icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v18M3 9h18M8 15h8M8 21h8"/></svg>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg>
             </div>
             <div>
               <h3 data-i18n="forWhom.legal.title">Birouri notariale și juridice</h3>
@@ -1226,21 +1226,32 @@
       <div class="container">
         <div class="section-head">
           <h2 data-i18n="pricing.title">Modele de plată</h2>
-          <p data-i18n="pricing.subtitle">Cloud pentru echipe care vor să înceapă rapid, Enterprise pentru nevoi la scară sau personalizate.</p>
+          <p data-i18n="pricing.subtitle">Începe gratuit, treci pe Plătit pentru funcționalități Cloud, sau discută cu noi pentru Enterprise.</p>
         </div>
         <div class="pricing-grid">
           <article class="pricing-card">
-            <span class="pricing-badge pricing-badge--price" data-i18n-html="pricing.cloud.price"><strong>32,5 RON</strong> · fără TVA</span>
-            <h3 data-i18n="pricing.cloud.title">Cloud</h3>
-            <p class="pricing-desc" data-i18n="pricing.cloud.desc">Acces imediat, fără servere de administrat. Actualizări și backup gestionate pentru tine.</p>
+            <span class="pricing-badge pricing-badge--price" data-i18n-html="pricing.free.price"><strong>0 RON</strong></span>
+            <h3 data-i18n="pricing.free.title">Gratuit</h3>
+            <p class="pricing-desc" data-i18n="pricing.free.desc">Spațiul de lucru de bază pentru foldere, documente și partajare sigură.</p>
             <ul class="pricing-features">
-              <li data-i18n="pricing.cloud.f1">Acces de oriunde</li>
-              <li data-i18n="pricing.cloud.f2">Autentificare și partajare incluse</li>
-              <li data-i18n="pricing.cloud.f3">Suport la implementare</li>
+              <li data-i18n="pricing.free.f1">Foldere, documente și previzualizare PDF</li>
+              <li data-i18n="pricing.free.f2">Câmpuri de bază: text, parolă, telefon, email, număr și dată</li>
+              <li data-i18n="pricing.free.f3">Autentificare și partajare cu roluri incluse</li>
             </ul>
-            <span class="pricing-tag" data-i18n="pricing.cloud.tag">Abonament lunar</span>
+            <span class="pricing-tag" data-i18n="pricing.free.tag">Pentru început și uz curent</span>
           </article>
           <article class="pricing-card featured">
+            <span class="pricing-badge pricing-badge--price" data-i18n-html="pricing.paid.price"><strong>35 RON</strong> · fără TVA / lună</span>
+            <h3 data-i18n="pricing.paid.title">Plătit</h3>
+            <p class="pricing-desc" data-i18n="pricing.paid.desc">Digitaldoc Cloud pentru echipe care au nevoie de câmpuri avansate și module conectate.</p>
+            <ul class="pricing-features">
+              <li data-i18n="pricing.paid.f1">Toate tipurile de câmpuri și liste infinite</li>
+              <li data-i18n="pricing.paid.f2">DigiStorage, surse de date și filtre</li>
+              <li data-i18n="pricing.paid.f3">Reînnoire lunară automată, cu anulare oricând</li>
+            </ul>
+            <span class="pricing-tag" data-i18n="pricing.paid.tag">Abonament Digitaldoc Cloud</span>
+          </article>
+          <article class="pricing-card">
             <span class="pricing-badge" data-i18n="pricing.enterprise.badge">Personalizat</span>
             <h3 data-i18n="pricing.enterprise.title">Enterprise</h3>
             <p class="pricing-desc" data-i18n="pricing.enterprise.desc">Soluție adaptată organizației tale: volum, securitate, integrări și fluxuri de lucru la comandă.</p>
@@ -1267,7 +1278,7 @@
       <div class="container">
         <div class="section-head">
           <h2 data-i18n="contact.title">Contact</h2>
-          <p data-i18n="contact.subtitle">Întrebări despre demo, Cloud, Enterprise sau parteneriat? Scrie-ne.</p>
+          <p data-i18n="contact.subtitle">Întrebări despre demo, Plătit, Enterprise sau parteneriat? Scrie-ne.</p>
         </div>
         <div class="contact-wrap">
           <form class="contact-form" id="contact-form" action="https://api.web3forms.com/submit" method="POST">

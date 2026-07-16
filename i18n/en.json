@@ -101,15 +101,24 @@
   },
   "pricing": {
     "title": "Pricing",
-    "subtitle": "Cloud for teams that want to start quickly; Enterprise for scale or custom needs.",
-    "cloud": {
-      "price": "<strong>32.5 RON</strong> · excl. VAT",
-      "title": "Cloud",
-      "desc": "Instant access, no servers to manage. Updates and backups handled for you.",
-      "f1": "Access from anywhere",
-      "f2": "Authentication and sharing included",
-      "f3": "Implementation support",
-      "tag": "Monthly subscription"
+    "subtitle": "Start free, upgrade to Paid for Cloud features, or talk to us about Enterprise.",
+    "free": {
+      "price": "<strong>0 RON</strong>",
+      "title": "Free",
+      "desc": "The core workspace for folders, documents, and secure sharing.",
+      "f1": "Folders, documents, and PDF preview",
+      "f2": "Basic fields: text, password, phone, email, number, and date",
+      "f3": "Authentication and role-based sharing included",
+      "tag": "For getting started and everyday use"
+    },
+    "paid": {
+      "price": "<strong>35 RON</strong> · excl. VAT / month",
+      "title": "Paid",
+      "desc": "Digitaldoc Cloud for teams that need advanced fields and connected modules.",
+      "f1": "All field types and infinite lists",
+      "f2": "DigiStorage, data sources, and filters",
+      "f3": "Monthly auto-renewal, cancel anytime",
+      "tag": "Digitaldoc Cloud subscription"
     },
     "enterprise": {
       "badge": "Custom",
@@ -128,7 +137,7 @@
   },
   "contact": {
     "title": "Contact",
-    "subtitle": "Questions about a demo, Cloud, Enterprise, or partnership? Write to us.",
+    "subtitle": "Questions about a demo, Paid, Enterprise, or partnership? Write to us.",
     "namePlaceholder": "Your name",
     "emailPlaceholder": "Email",
     "messagePlaceholder": "Your message",
