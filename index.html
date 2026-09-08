@@ -647,6 +647,10 @@
 
     .pricing-card {
       position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100%;
       padding: 2rem;
       background: var(--surface);
       border: 1px solid var(--border);
@@ -740,7 +744,9 @@
     .pricing-features {
       list-style: none;
       text-align: left;
+      width: 100%;
       margin-bottom: 1.5rem;
+      flex: 1 1 auto;
     }
 
     .pricing-features li {
@@ -779,7 +785,8 @@
 
     .pricing-cta {
       display: inline-flex;
-      margin-top: 0.25rem;
+      margin-top: auto;
+      align-self: center;
     }
 
     .pricing-matrix-wrap {
