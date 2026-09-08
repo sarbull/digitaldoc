@@ -109,6 +109,8 @@
       "f1": "Folders, files, and guest share (link + PIN)",
       "f2": "TEXT and TEXTAREA fields only",
       "f3": "Authentication included",
+      "ribbon": "★ 30 days",
+      "ribbonAria": "Templates and PDF for the first 30 days on the Free plan",
       "cta": "Start free"
     },
     "hobby": {
@@ -137,6 +139,7 @@
       "pro": "Pro",
       "yes": "Yes",
       "no": "—",
+      "trial": "<span class=\"pricing-star\" aria-hidden=\"true\">*</span>",
       "groups": {
         "core": "Core",
         "textFields": "Text fields",
@@ -152,7 +155,8 @@
         "advancedFields": "Map, signature, products, image picker",
         "modules": "DigiStorage, data sources, assets, health"
       }
-    }
+    },
+    "footnote": "<span class=\"pricing-star\" aria-hidden=\"true\">*</span> New Free accounts include templates and PDF export for the first 30 days after signup."
   },
   "cta": {
     "title": "Ready to organize your documents?",

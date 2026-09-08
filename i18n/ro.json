@@ -109,6 +109,8 @@
       "f1": "Foldere, fișiere și partajare cu link + PIN",
       "f2": "Câmpuri TEXT și TEXTAREA",
       "f3": "Autentificare inclusă",
+      "ribbon": "★ 30 zile",
+      "ribbonAria": "Șabloane și PDF în primele 30 de zile pe planul Gratuit",
       "cta": "Începe gratuit"
     },
     "hobby": {
@@ -137,6 +139,7 @@
       "pro": "Pro",
       "yes": "Da",
       "no": "—",
+      "trial": "<span class=\"pricing-star\" aria-hidden=\"true\">*</span>",
       "groups": {
         "core": "De bază",
         "textFields": "Câmpuri text",
@@ -152,7 +155,8 @@
         "advancedFields": "Hartă, semnătură, produse, image picker",
         "modules": "DigiStorage, surse de date, asset-uri, health"
       }
-    }
+    },
+    "footnote": "<span class=\"pricing-star\" aria-hidden=\"true\">*</span> Conturile noi pe planul Gratuit includ șabloanele și exportul PDF în primele 30 de zile de la creare."
   },
   "cta": {
     "title": "Gata să îți organizezi documentele?",
