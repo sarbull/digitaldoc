@@ -101,33 +101,57 @@
   },
   "pricing": {
     "title": "Pricing",
-    "subtitle": "Start free, upgrade to Paid for Cloud features, or talk to us about Enterprise.",
+    "subtitle": "Start free, move to Hobby for text fields and PDF, or choose Pro for the full product.",
     "free": {
       "price": "<strong>0 RON</strong>",
       "title": "Free",
-      "desc": "The core workspace for folders, documents, and secure sharing.",
-      "f1": "Folders, documents, and PDF preview",
-      "f2": "Basic fields: text, password, phone, email, number, and date",
-      "f3": "Authentication and role-based sharing included",
-      "tag": "For getting started and everyday use"
+      "desc": "Document structure with basic text fields and guest sharing.",
+      "f1": "Folders, files, and guest share (link + PIN)",
+      "f2": "TEXT and TEXTAREA fields only",
+      "f3": "Authentication included",
+      "cta": "Start free"
     },
-    "paid": {
+    "hobby": {
       "price": "<strong>35 RON</strong> · excl. VAT / month",
-      "title": "Paid",
-      "desc": "Digitaldoc Cloud for teams that need advanced fields and connected modules.",
-      "f1": "All field types and infinite lists",
-      "f2": "DigiStorage, data sources, and filters",
+      "title": "Hobby",
+      "desc": "All text-oriented fields, plus templates and PDF export.",
+      "f1": "Email, phone, password, number, date, pickers, lists",
+      "f2": "Templates and PDF export",
       "f3": "Monthly auto-renewal, cancel anytime",
-      "tag": "Digitaldoc Cloud subscription"
+      "cta": "Choose Hobby"
     },
-    "enterprise": {
-      "badge": "Custom",
-      "title": "Enterprise",
-      "desc": "A solution tailored to your organization: volume, security, integrations, and custom workflows.",
-      "f1": "Dedicated setup and onboarding",
-      "f2": "Integrations with existing systems",
-      "f3": "SLA and priority support",
-      "tagHtml": "<a href=\"#contact\">Custom quote — contact us</a>"
+    "pro": {
+      "price": "<strong>70 RON</strong> · excl. VAT / month",
+      "title": "Pro",
+      "desc": "Everything: DigiStorage, images, data sources, and advanced fields.",
+      "f1": "Map, signature, products, and image picker",
+      "f2": "DigiStorage, data sources, and static assets",
+      "f3": "Prorated upgrade from Hobby anytime",
+      "cta": "Choose Pro"
+    },
+    "matrix": {
+      "title": "Feature comparison",
+      "feature": "Feature",
+      "free": "Free",
+      "hobby": "Hobby",
+      "pro": "Pro",
+      "yes": "Yes",
+      "no": "—",
+      "groups": {
+        "core": "Core",
+        "textFields": "Text fields",
+        "advancedFields": "Advanced fields",
+        "modules": "Modules"
+      },
+      "features": {
+        "filesFolders": "Files & folders",
+        "guestShare": "Guest share (link + PIN)",
+        "templatesPdf": "Templates & PDF export",
+        "basicText": "TEXT and TEXTAREA",
+        "hobbyFields": "Email, phone, password, number, date, pickers, lists",
+        "advancedFields": "Map, signature, products, image picker",
+        "modules": "DigiStorage, data sources, assets, health"
+      }
     }
   },
   "cta": {
@@ -137,7 +161,7 @@
   },
   "contact": {
     "title": "Contact",
-    "subtitle": "Questions about a demo, Paid, Enterprise, or partnership? Write to us.",
+    "subtitle": "Questions about a demo, Hobby, Pro, or partnership? Write to us.",
     "namePlaceholder": "Your name",
     "emailPlaceholder": "Email",
     "messagePlaceholder": "Your message",

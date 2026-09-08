@@ -728,6 +728,82 @@
       text-decoration: underline;
     }
 
+    .pricing-cta {
+      display: inline-flex;
+      margin-top: 0.25rem;
+    }
+
+    .pricing-matrix-wrap {
+      margin-top: 3rem;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      background: var(--surface);
+    }
+
+    .pricing-matrix {
+      width: 100%;
+      min-width: 560px;
+      border-collapse: collapse;
+      font-size: 0.92rem;
+    }
+
+    .pricing-matrix caption {
+      caption-side: top;
+      padding: 1.1rem 1.25rem 0.75rem;
+      text-align: left;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .pricing-matrix th,
+    .pricing-matrix td {
+      padding: 0.7rem 1rem;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    .pricing-matrix th:first-child,
+    .pricing-matrix td:first-child {
+      text-align: left;
+      font-weight: 500;
+      color: var(--text);
+      width: 42%;
+    }
+
+    .pricing-matrix thead th {
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--text-muted);
+      border-top: 0;
+      background: color-mix(in srgb, var(--surface) 88%, var(--brand) 12%);
+    }
+
+    .pricing-matrix .matrix-group td {
+      text-align: left;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--brand);
+      background: color-mix(in srgb, var(--surface) 92%, var(--brand) 8%);
+    }
+
+    .pricing-matrix .yes {
+      color: var(--brand);
+      font-weight: 700;
+    }
+
+    .pricing-matrix .no {
+      color: var(--text-muted);
+      opacity: 0.7;
+    }
+
     /* Contact */
     .contact-wrap {
       max-width: 520px;
@@ -1226,42 +1302,104 @@
       <div class="container">
         <div class="section-head">
           <h2 data-i18n="pricing.title">Modele de plată</h2>
-          <p data-i18n="pricing.subtitle">Începe gratuit, treci pe Plătit pentru funcționalități Cloud, sau discută cu noi pentru Enterprise.</p>
+          <p data-i18n="pricing.subtitle">Începe gratuit, treci pe Hobby pentru câmpuri și PDF, sau alege Pro pentru tot ecosistemul.</p>
         </div>
         <div class="pricing-grid">
           <article class="pricing-card">
             <span class="pricing-badge pricing-badge--price" data-i18n-html="pricing.free.price"><strong>0 RON</strong></span>
             <h3 data-i18n="pricing.free.title">Gratuit</h3>
-            <p class="pricing-desc" data-i18n="pricing.free.desc">Spațiul de lucru de bază pentru foldere, documente și partajare sigură.</p>
+            <p class="pricing-desc" data-i18n="pricing.free.desc">Structură de documente cu câmpuri text de bază și partajare pentru invitați.</p>
             <ul class="pricing-features">
-              <li data-i18n="pricing.free.f1">Foldere, documente și previzualizare PDF</li>
-              <li data-i18n="pricing.free.f2">Câmpuri de bază: text, parolă, telefon, email, număr și dată</li>
-              <li data-i18n="pricing.free.f3">Autentificare și partajare cu roluri incluse</li>
+              <li data-i18n="pricing.free.f1">Foldere, fișiere și partajare cu link + PIN</li>
+              <li data-i18n="pricing.free.f2">Câmpuri TEXT și TEXTAREA</li>
+              <li data-i18n="pricing.free.f3">Autentificare inclusă</li>
             </ul>
-            <span class="pricing-tag" data-i18n="pricing.free.tag">Pentru început și uz curent</span>
-          </article>
-          <article class="pricing-card featured">
-            <span class="pricing-badge pricing-badge--price" data-i18n-html="pricing.paid.price"><strong>35 RON</strong> · fără TVA / lună</span>
-            <h3 data-i18n="pricing.paid.title">Plătit</h3>
-            <p class="pricing-desc" data-i18n="pricing.paid.desc">Digitaldoc Cloud pentru echipe care au nevoie de câmpuri avansate și module conectate.</p>
-            <ul class="pricing-features">
-              <li data-i18n="pricing.paid.f1">Toate tipurile de câmpuri și liste infinite</li>
-              <li data-i18n="pricing.paid.f2">DigiStorage, surse de date și filtre</li>
-              <li data-i18n="pricing.paid.f3">Reînnoire lunară automată, cu anulare oricând</li>
-            </ul>
-            <span class="pricing-tag" data-i18n="pricing.paid.tag">Abonament Digitaldoc Cloud</span>
+            <a href="https://aplicatia.digitaldoc.ro/register" class="btn btn-ghost pricing-cta" data-i18n="pricing.free.cta">Începe gratuit</a>
           </article>
           <article class="pricing-card">
-            <span class="pricing-badge" data-i18n="pricing.enterprise.badge">Personalizat</span>
-            <h3 data-i18n="pricing.enterprise.title">Enterprise</h3>
-            <p class="pricing-desc" data-i18n="pricing.enterprise.desc">Soluție adaptată organizației tale: volum, securitate, integrări și fluxuri de lucru la comandă.</p>
+            <span class="pricing-badge pricing-badge--price" data-i18n-html="pricing.hobby.price"><strong>35 RON</strong> · fără TVA / lună</span>
+            <h3 data-i18n="pricing.hobby.title">Hobby</h3>
+            <p class="pricing-desc" data-i18n="pricing.hobby.desc">Toate câmpurile orientate pe text, plus șabloane și export PDF.</p>
             <ul class="pricing-features">
-              <li data-i18n="pricing.enterprise.f1">Configurare și onboarding dedicat</li>
-              <li data-i18n="pricing.enterprise.f2">Integrări cu sistemele existente</li>
-              <li data-i18n="pricing.enterprise.f3">SLA și suport prioritar</li>
+              <li data-i18n="pricing.hobby.f1">Email, telefon, parolă, număr, dată, picker-e, liste</li>
+              <li data-i18n="pricing.hobby.f2">Șabloane și export PDF</li>
+              <li data-i18n="pricing.hobby.f3">Reînnoire lunară automată, anulare oricând</li>
             </ul>
-            <span class="pricing-tag" data-i18n-html="pricing.enterprise.tagHtml"><a href="#contact">Ofertă personalizată — contactează-ne</a></span>
+            <a href="https://aplicatia.digitaldoc.ro/register" class="btn btn-ghost pricing-cta" data-i18n="pricing.hobby.cta">Alege Hobby</a>
           </article>
+          <article class="pricing-card featured">
+            <span class="pricing-badge pricing-badge--price" data-i18n-html="pricing.pro.price"><strong>70 RON</strong> · fără TVA / lună</span>
+            <h3 data-i18n="pricing.pro.title">Pro</h3>
+            <p class="pricing-desc" data-i18n="pricing.pro.desc">Tot produsul: DigiStorage, imagini, surse de date și câmpuri avansate.</p>
+            <ul class="pricing-features">
+              <li data-i18n="pricing.pro.f1">Hartă, semnătură, produse și image picker</li>
+              <li data-i18n="pricing.pro.f2">DigiStorage, surse de date și asset-uri statice</li>
+              <li data-i18n="pricing.pro.f3">Upgrade proratat din Hobby, oricând în ciclu</li>
+            </ul>
+            <a href="https://aplicatia.digitaldoc.ro/register" class="btn btn-primary pricing-cta" data-i18n="pricing.pro.cta">Alege Pro</a>
+          </article>
+        </div>
+
+        <div class="pricing-matrix-wrap">
+          <table class="pricing-matrix">
+            <caption data-i18n="pricing.matrix.title">Comparație funcționalități</caption>
+            <thead>
+              <tr>
+                <th scope="col" data-i18n="pricing.matrix.feature">Funcționalitate</th>
+                <th scope="col" data-i18n="pricing.matrix.free">Gratuit</th>
+                <th scope="col" data-i18n="pricing.matrix.hobby">Hobby</th>
+                <th scope="col" data-i18n="pricing.matrix.pro">Pro</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="matrix-group"><td colspan="4" data-i18n="pricing.matrix.groups.core">De bază</td></tr>
+              <tr>
+                <td data-i18n="pricing.matrix.features.filesFolders">Fișiere și foldere</td>
+                <td class="yes" data-i18n="pricing.matrix.yes">Da</td>
+                <td class="yes" data-i18n="pricing.matrix.yes">Da</td>
+                <td class="yes" data-i18n="pricing.matrix.yes">Da</td>
+              </tr>
+              <tr>
+                <td data-i18n="pricing.matrix.features.guestShare">Partajare invitați (link + PIN)</td>
+                <td class="yes" data-i18n="pricing.matrix.yes">Da</td>
+                <td class="yes" data-i18n="pricing.matrix.yes">Da</td>
+                <td class="yes" data-i18n="pricing.matrix.yes">Da</td>
+              </tr>
+              <tr>
+                <td data-i18n="pricing.matrix.features.templatesPdf">Șabloane și export PDF</td>
+                <td class="no" data-i18n="pricing.matrix.no">—</td>
+                <td class="yes" data-i18n="pricing.matrix.yes">Da</td>
+                <td class="yes" data-i18n="pricing.matrix.yes">Da</td>
+              </tr>
+              <tr class="matrix-group"><td colspan="4" data-i18n="pricing.matrix.groups.textFields">Câmpuri text</td></tr>
+              <tr>
+                <td data-i18n="pricing.matrix.features.basicText">TEXT și TEXTAREA</td>
+                <td class="yes" data-i18n="pricing.matrix.yes">Da</td>
+                <td class="yes" data-i18n="pricing.matrix.yes">Da</td>
+                <td class="yes" data-i18n="pricing.matrix.yes">Da</td>
+              </tr>
+              <tr>
+                <td data-i18n="pricing.matrix.features.hobbyFields">Email, telefon, parolă, număr, dată, picker-e, liste</td>
+                <td class="no" data-i18n="pricing.matrix.no">—</td>
+                <td class="yes" data-i18n="pricing.matrix.yes">Da</td>
+                <td class="yes" data-i18n="pricing.matrix.yes">Da</td>
+              </tr>
+              <tr class="matrix-group"><td colspan="4" data-i18n="pricing.matrix.groups.advancedFields">Câmpuri avansate</td></tr>
+              <tr>
+                <td data-i18n="pricing.matrix.features.advancedFields">Hartă, semnătură, produse, image picker</td>
+                <td class="no" data-i18n="pricing.matrix.no">—</td>
+                <td class="no" data-i18n="pricing.matrix.no">—</td>
+                <td class="yes" data-i18n="pricing.matrix.yes">Da</td>
+              </tr>
+              <tr class="matrix-group"><td colspan="4" data-i18n="pricing.matrix.groups.modules">Module</td></tr>
+              <tr>
+                <td data-i18n="pricing.matrix.features.modules">DigiStorage, surse de date, asset-uri, health</td>
+                <td class="no" data-i18n="pricing.matrix.no">—</td>
+                <td class="no" data-i18n="pricing.matrix.no">—</td>
+                <td class="yes" data-i18n="pricing.matrix.yes">Da</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </section>
@@ -1278,7 +1416,7 @@
       <div class="container">
         <div class="section-head">
           <h2 data-i18n="contact.title">Contact</h2>
-          <p data-i18n="contact.subtitle">Întrebări despre demo, Plătit, Enterprise sau parteneriat? Scrie-ne.</p>
+          <p data-i18n="contact.subtitle">Întrebări despre demo, Hobby, Pro sau parteneriat? Scrie-ne.</p>
         </div>
         <div class="contact-wrap">
           <form class="contact-form" id="contact-form" action="https://api.web3forms.com/submit" method="POST">

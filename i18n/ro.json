@@ -101,33 +101,57 @@
   },
   "pricing": {
     "title": "Modele de plată",
-    "subtitle": "Începe gratuit, treci pe Plătit pentru funcționalități Cloud, sau discută cu noi pentru Enterprise.",
+    "subtitle": "Începe gratuit, treci pe Hobby pentru câmpuri și PDF, sau alege Pro pentru tot ecosistemul.",
     "free": {
       "price": "<strong>0 RON</strong>",
       "title": "Gratuit",
-      "desc": "Spațiul de lucru de bază pentru foldere, documente și partajare sigură.",
-      "f1": "Foldere, documente și previzualizare PDF",
-      "f2": "Câmpuri de bază: text, parolă, telefon, email, număr și dată",
-      "f3": "Autentificare și partajare cu roluri incluse",
-      "tag": "Pentru început și uz curent"
+      "desc": "Structură de documente cu câmpuri text de bază și partajare pentru invitați.",
+      "f1": "Foldere, fișiere și partajare cu link + PIN",
+      "f2": "Câmpuri TEXT și TEXTAREA",
+      "f3": "Autentificare inclusă",
+      "cta": "Începe gratuit"
     },
-    "paid": {
+    "hobby": {
       "price": "<strong>35 RON</strong> · fără TVA / lună",
-      "title": "Plătit",
-      "desc": "Digitaldoc Cloud pentru echipe care au nevoie de câmpuri avansate și module conectate.",
-      "f1": "Toate tipurile de câmpuri și liste infinite",
-      "f2": "DigiStorage, surse de date și filtre",
-      "f3": "Reînnoire lunară automată, cu anulare oricând",
-      "tag": "Abonament Digitaldoc Cloud"
+      "title": "Hobby",
+      "desc": "Toate câmpurile orientate pe text, plus șabloane și export PDF.",
+      "f1": "Email, telefon, parolă, număr, dată, picker-e, liste",
+      "f2": "Șabloane și export PDF",
+      "f3": "Reînnoire lunară automată, anulare oricând",
+      "cta": "Alege Hobby"
     },
-    "enterprise": {
-      "badge": "Personalizat",
-      "title": "Enterprise",
-      "desc": "Soluție adaptată organizației tale: volum, securitate, integrări și fluxuri de lucru la comandă.",
-      "f1": "Configurare și onboarding dedicat",
-      "f2": "Integrări cu sistemele existente",
-      "f3": "SLA și suport prioritar",
-      "tagHtml": "<a href=\"#contact\">Ofertă personalizată — contactează-ne</a>"
+    "pro": {
+      "price": "<strong>70 RON</strong> · fără TVA / lună",
+      "title": "Pro",
+      "desc": "Tot produsul: DigiStorage, imagini, surse de date și câmpuri avansate.",
+      "f1": "Hartă, semnătură, produse și image picker",
+      "f2": "DigiStorage, surse de date și asset-uri statice",
+      "f3": "Upgrade proratat din Hobby, oricând în ciclu",
+      "cta": "Alege Pro"
+    },
+    "matrix": {
+      "title": "Comparație funcționalități",
+      "feature": "Funcționalitate",
+      "free": "Gratuit",
+      "hobby": "Hobby",
+      "pro": "Pro",
+      "yes": "Da",
+      "no": "—",
+      "groups": {
+        "core": "De bază",
+        "textFields": "Câmpuri text",
+        "advancedFields": "Câmpuri avansate",
+        "modules": "Module"
+      },
+      "features": {
+        "filesFolders": "Fișiere și foldere",
+        "guestShare": "Partajare invitați (link + PIN)",
+        "templatesPdf": "Șabloane și export PDF",
+        "basicText": "TEXT și TEXTAREA",
+        "hobbyFields": "Email, telefon, parolă, număr, dată, picker-e, liste",
+        "advancedFields": "Hartă, semnătură, produse, image picker",
+        "modules": "DigiStorage, surse de date, asset-uri, health"
+      }
     }
   },
   "cta": {
@@ -137,7 +161,7 @@
   },
   "contact": {
     "title": "Contact",
-    "subtitle": "Întrebări despre demo, Plătit, Enterprise sau parteneriat? Scrie-ne.",
+    "subtitle": "Întrebări despre demo, Hobby, Pro sau parteneriat? Scrie-ne.",
     "namePlaceholder": "Numele tău",
     "emailPlaceholder": "Email",
     "messagePlaceholder": "Mesajul tău",
