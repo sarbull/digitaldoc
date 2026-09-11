@@ -125,10 +125,10 @@
     "pro": {
       "price": "<strong>70 RON</strong> · excl. VAT / month",
       "title": "Pro",
-      "desc": "Everything: DigiStorage, images, data sources, field import & linking, and advanced fields.",
+      "desc": "Everything: DigiStorage, images, data sources, .ddoc files, field import & linking, and advanced fields.",
       "f1": "Map, signature, products, and image picker",
       "f2": "DigiStorage, data sources, and static assets",
-      "f3": "Field import & linking between documents",
+      "f3": ".ddoc export/import and field import & linking",
       "f4": "Prorated upgrade from Hobby anytime",
       "cta": "Choose Pro"
     },
@@ -155,6 +155,7 @@
         "hobbyFields": "Email, phone, password, number, date, pickers, lists",
         "advancedFields": "Map, signature, products, image picker",
         "modules": "DigiStorage, data sources, assets, health",
+        "ddoc": ".ddoc export & import",
         "fieldImport": "Field import & linking"
       }
     },

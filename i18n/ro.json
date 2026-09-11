@@ -125,10 +125,10 @@
     "pro": {
       "price": "<strong>70 RON</strong> · fără TVA / lună",
       "title": "Pro",
-      "desc": "Tot produsul: DigiStorage, imagini, surse de date, import și legare câmpuri, plus câmpuri avansate.",
+      "desc": "Tot produsul: DigiStorage, imagini, surse de date, fișiere .ddoc, import și legare câmpuri, plus câmpuri avansate.",
       "f1": "Hartă, semnătură, produse și image picker",
       "f2": "DigiStorage, surse de date și asset-uri statice",
-      "f3": "Import și legare câmpuri între documente",
+      "f3": "Export/import .ddoc și import/legare câmpuri",
       "f4": "Upgrade proratat din Hobby, oricând în ciclu",
       "cta": "Alege Pro"
     },
@@ -155,6 +155,7 @@
         "hobbyFields": "Email, telefon, parolă, număr, dată, picker-e, liste",
         "advancedFields": "Hartă, semnătură, produse, image picker",
         "modules": "DigiStorage, surse de date, asset-uri, health",
+        "ddoc": "Export și import .ddoc",
         "fieldImport": "Import și legare câmpuri"
       }
     },
