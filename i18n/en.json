@@ -125,10 +125,11 @@
     "pro": {
       "price": "<strong>70 RON</strong> · excl. VAT / month",
       "title": "Pro",
-      "desc": "Everything: DigiStorage, images, data sources, and advanced fields.",
+      "desc": "Everything: DigiStorage, images, data sources, field import & linking, and advanced fields.",
       "f1": "Map, signature, products, and image picker",
       "f2": "DigiStorage, data sources, and static assets",
-      "f3": "Prorated upgrade from Hobby anytime",
+      "f3": "Field import & linking between documents",
+      "f4": "Prorated upgrade from Hobby anytime",
       "cta": "Choose Pro"
     },
     "matrix": {
@@ -153,7 +154,8 @@
         "basicText": "TEXT and TEXTAREA",
         "hobbyFields": "Email, phone, password, number, date, pickers, lists",
         "advancedFields": "Map, signature, products, image picker",
-        "modules": "DigiStorage, data sources, assets, health"
+        "modules": "DigiStorage, data sources, assets, health",
+        "fieldImport": "Field import & linking"
       }
     },
     "footnote": "<span class=\"pricing-star\" aria-hidden=\"true\">*</span> New Free accounts include templates and PDF export for the first 30 days after signup."

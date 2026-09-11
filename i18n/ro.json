@@ -125,10 +125,11 @@
     "pro": {
       "price": "<strong>70 RON</strong> · fără TVA / lună",
       "title": "Pro",
-      "desc": "Tot produsul: DigiStorage, imagini, surse de date și câmpuri avansate.",
+      "desc": "Tot produsul: DigiStorage, imagini, surse de date, import și legare câmpuri, plus câmpuri avansate.",
       "f1": "Hartă, semnătură, produse și image picker",
       "f2": "DigiStorage, surse de date și asset-uri statice",
-      "f3": "Upgrade proratat din Hobby, oricând în ciclu",
+      "f3": "Import și legare câmpuri între documente",
+      "f4": "Upgrade proratat din Hobby, oricând în ciclu",
       "cta": "Alege Pro"
     },
     "matrix": {
@@ -153,7 +154,8 @@
         "basicText": "TEXT și TEXTAREA",
         "hobbyFields": "Email, telefon, parolă, număr, dată, picker-e, liste",
         "advancedFields": "Hartă, semnătură, produse, image picker",
-        "modules": "DigiStorage, surse de date, asset-uri, health"
+        "modules": "DigiStorage, surse de date, asset-uri, health",
+        "fieldImport": "Import și legare câmpuri"
       }
     },
     "footnote": "<span class=\"pricing-star\" aria-hidden=\"true\">*</span> Conturile noi pe planul Gratuit includ șabloanele și exportul PDF în primele 30 de zile de la creare."
