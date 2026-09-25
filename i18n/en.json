@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Digitaldoc — Folders, documents, and secure sharing",
-    "description": "Digitaldoc: organize documents in folders, edit rich document content, preview PDFs, and share with clear roles. Sign in with Google or password."
+    "title": "Digitaldoc — Folders, documents, and share links",
+    "description": "Digitaldoc: organize documents in folders, edit rich document content, preview PDFs, and share with a simple link. Sign in with Google or password."
   },
   "a11y": {
     "logoHome": "Digitaldoc home",
@@ -27,8 +27,8 @@
   },
   "hero": {
     "badge": "Cloud document management",
-    "title": "Folders, documents, and protected sharing",
-    "lead": "Organize contracts and files in folders, edit rich content, preview PDFs, and invite collaborators with clear roles — all in one app.",
+    "title": "Folders, documents, and simple sharing",
+    "lead": "Organize contracts and files in folders, edit rich content, preview PDFs, and share with a link — all in one app.",
     "ctaPrimary": "Create a free account",
     "ctaSecondary": "See features",
     "pointAuth": "Google or password sign-in",
@@ -40,7 +40,7 @@
     "subtitle": "Features available in the platform today — built for teams that work with documents every day.",
     "folders": {
       "title": "Nested folders",
-      "desc": "Structure documents in folder trees with role-based access: owner, moderator, editor, or reader."
+      "desc": "Structure documents in folder trees — nest by client, case, or project and keep everything easy to find."
     },
     "editor": {
       "title": "Document editor",
@@ -51,8 +51,8 @@
       "desc": "See how the exported document looks before you share it — fast rendering via a dedicated PDF service."
     },
     "sharing": {
-      "title": "Sharing with invitations",
-      "desc": "Invite collaborators to folders with a secure link and password. Accept the invite and work in the shared space right away."
+      "title": "Share with a link",
+      "desc": "Publish a file or folder, copy the share link, and send it. Recipients open it in the browser — no account required."
     },
     "auth": {
       "title": "Secure authentication",
@@ -76,7 +76,7 @@
     },
     "step3": {
       "title": "Share and preview",
-      "desc": "Invite colleagues to a folder, set roles, and check the PDF before sending the document onward."
+      "desc": "Preview the PDF, copy a share link, and send it — recipients open the document without signing up."
     }
   },
   "forWhom": {
@@ -88,15 +88,15 @@
     },
     "legal": {
       "title": "Notary and legal offices",
-      "desc": "Contracts, annexes, and deeds grouped by client or case file, with strict control over who can read or edit."
+      "desc": "Contracts, annexes, and deeds grouped by client or case file. Share a link when someone needs access."
     },
     "photographers": {
       "title": "Photographers",
-      "desc": "Keep contracts, briefs, and deliverables per client or event. Invite collaborators or clients to shared folders and verify the PDF before delivery."
+      "desc": "Keep contracts, briefs, and deliverables per client or event. Share a link with the client and verify the PDF before delivery."
     },
     "teams": {
       "title": "Teams and professionals",
-      "desc": "One place for shared documents — no more folders lost in email or on USB drives."
+      "desc": "One place for documents you can share with a link — no more folders lost in email or on USB drives."
     }
   },
   "pricing": {
@@ -105,8 +105,8 @@
     "free": {
       "price": "<strong>0 RON</strong>",
       "title": "Free",
-      "desc": "Document structure with basic text fields and guest sharing.",
-      "f1": "Folders, files, and guest share (link + PIN)",
+      "desc": "Document structure with basic text fields and share links.",
+      "f1": "Folders, files, and share via link",
       "f2": "TEXT and TEXTAREA fields only",
       "f3": "Authentication included",
       "ribbon": "★ 30 days",
@@ -117,7 +117,7 @@
       "price": "<strong>35 RON</strong> · excl. VAT / month",
       "title": "Hobby",
       "desc": "All text-oriented fields, plus templates and PDF export.",
-      "f1": "Email, phone, password, number, date, pickers, lists",
+      "f1": "Email, phone, password, number, date, title/divider, pickers, checkbox/radio, lists",
       "f2": "Templates and PDF export",
       "f3": "Monthly auto-renewal, cancel anytime",
       "cta": "Choose Hobby"
@@ -149,12 +149,14 @@
       },
       "features": {
         "filesFolders": "Files & folders",
-        "guestShare": "Guest share (link + PIN)",
+        "guestShare": "Share via link",
         "templatesPdf": "Templates & PDF export",
         "basicText": "TEXT and TEXTAREA",
-        "hobbyFields": "Email, phone, password, number, date, pickers, lists",
+        "hobbyFields": "Email, phone, password, number, date, title/divider, pickers, checkbox/radio, lists",
         "advancedFields": "Map, signature, products, image picker",
-        "modules": "DigiStorage, data sources, assets, health",
+        "staticAssets": "Static assets",
+        "dataSources": "Data sources",
+        "digiStorage": "DigiStorage",
         "ddoc": ".ddoc export & import",
         "fieldImport": "Field import & linking"
       }
@@ -163,7 +165,7 @@
   },
   "cta": {
     "title": "Ready to organize your documents?",
-    "subtitle": "Open the app, create your first folder, and invite your team in minutes.",
+    "subtitle": "Open the app, create your first folder, and share a link in minutes.",
     "button": "Open the app"
   },
   "contact": {
@@ -176,7 +178,7 @@
     "success": "Thank you! Your message was sent — we'll get back to you soon."
   },
   "footer": {
-    "copyright": "© 2025 Digitaldoc. All rights reserved.",
+    "copyright": "© 2026 Digitaldoc. All rights reserved.",
     "app": "App",
     "signIn": "Sign in",
     "terms": "Terms and conditions"

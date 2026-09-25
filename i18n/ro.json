@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Digitaldoc — Dosare, documente și partajare sigură",
-    "description": "Digitaldoc: organizează documente în foldere, editează conținut bogat, previzualizează PDF și partajează cu roluri clare. Autentificare Google sau parolă."
+    "title": "Digitaldoc — Dosare, documente și partajare prin link",
+    "description": "Digitaldoc: organizează documente în foldere, editează conținut bogat, previzualizează PDF și partajează cu un link. Autentificare Google sau parolă."
   },
   "a11y": {
     "logoHome": "Digitaldoc acasă",
@@ -27,8 +27,8 @@
   },
   "hero": {
     "badge": "Management documentar în cloud",
-    "title": "Dosare, documente și partajare protejată",
-    "lead": "Organizează contracte și fișiere în foldere, editează conținut bogat, previzualizează PDF și invită colaboratori cu roluri clare — totul într-o singură aplicație.",
+    "title": "Dosare, documente și partajare simplă",
+    "lead": "Organizează contracte și fișiere în foldere, editează conținut bogat, previzualizează PDF și partajează cu un link — totul într-o singură aplicație.",
     "ctaPrimary": "Creează cont gratuit",
     "ctaSecondary": "Vezi funcționalitățile",
     "pointAuth": "Autentificare Google sau parolă",
@@ -40,7 +40,7 @@
     "subtitle": "Funcționalități disponibile acum în platformă — construite pentru echipe care lucrează zilnic cu documente.",
     "folders": {
       "title": "Foldere ierarhice",
-      "desc": "Structurează documentele în arbori de foldere, cu acces pe roluri: proprietar, moderator, editor sau cititor."
+      "desc": "Structurează documentele în arbori de foldere — pe client, dosar sau proiect, ușor de găsit."
     },
     "editor": {
       "title": "Editor de documente",
@@ -51,8 +51,8 @@
       "desc": "Vezi cum arată documentul exportat înainte de a-l partaja — randare rapidă prin serviciul dedicat PDF."
     },
     "sharing": {
-      "title": "Partajare cu invitații",
-      "desc": "Invită colaboratori pe foldere cu link securizat și parolă. Acceptă invitația și lucrează imediat în spațiul partajat."
+      "title": "Partajare prin link",
+      "desc": "Publică un fișier sau folder, copiază linkul și trimite-l. Destinatarii îl deschid în browser — fără cont."
     },
     "auth": {
       "title": "Autentificare sigură",
@@ -76,7 +76,7 @@
     },
     "step3": {
       "title": "Partajezi și previzualizezi",
-      "desc": "Inviți colegii pe folder, setezi roluri și verifici PDF-ul înainte de a trimite documentul mai departe."
+      "desc": "Previzualizezi PDF-ul, copiezi un link de partajare și îl trimiți — destinatarii deschid documentul fără cont."
     }
   },
   "forWhom": {
@@ -88,15 +88,15 @@
     },
     "legal": {
       "title": "Birouri notariale și juridice",
-      "desc": "Contracte, anexe și acte grupate pe client sau dosar, cu control strict asupra cine poate citi sau modifica."
+      "desc": "Contracte, anexe și acte grupate pe client sau dosar. Partajezi un link când cineva are nevoie de acces."
     },
     "photographers": {
       "title": "Fotografi",
-      "desc": "Ține contractele, brief-urile și livrabilele pe client sau eveniment. Invită colaboratori sau clienți în foldere partajate și verifică PDF-ul înainte de livrare."
+      "desc": "Ține contractele, brief-urile și livrabilele pe client sau eveniment. Partajezi un link cu clientul și verifici PDF-ul înainte de livrare."
     },
     "teams": {
       "title": "Echipe și profesioniști",
-      "desc": "Un singur spațiu pentru documente partajate, fără foldere pierdute pe email sau stick-uri USB."
+      "desc": "Un singur spațiu pentru documente pe care le partajezi cu un link — fără foldere pierdute pe email sau stick-uri USB."
     }
   },
   "pricing": {
@@ -105,8 +105,8 @@
     "free": {
       "price": "<strong>0 RON</strong>",
       "title": "Gratuit",
-      "desc": "Structură de documente cu câmpuri text de bază și partajare pentru invitați.",
-      "f1": "Foldere, fișiere și partajare cu link + PIN",
+      "desc": "Structură de documente cu câmpuri text de bază și linkuri de partajare.",
+      "f1": "Foldere, fișiere și partajare prin link",
       "f2": "Câmpuri TEXT și TEXTAREA",
       "f3": "Autentificare inclusă",
       "ribbon": "★ 30 zile",
@@ -117,7 +117,7 @@
       "price": "<strong>35 RON</strong> · fără TVA / lună",
       "title": "Hobby",
       "desc": "Toate câmpurile orientate pe text, plus șabloane și export PDF.",
-      "f1": "Email, telefon, parolă, număr, dată, picker-e, liste",
+      "f1": "Email, telefon, parolă, număr, dată, titlu/divider, picker-e, checkbox/radio, liste",
       "f2": "Șabloane și export PDF",
       "f3": "Reînnoire lunară automată, anulare oricând",
       "cta": "Alege Hobby"
@@ -149,12 +149,14 @@
       },
       "features": {
         "filesFolders": "Fișiere și foldere",
-        "guestShare": "Partajare invitați (link + PIN)",
+        "guestShare": "Partajare prin link",
         "templatesPdf": "Șabloane și export PDF",
         "basicText": "TEXT și TEXTAREA",
-        "hobbyFields": "Email, telefon, parolă, număr, dată, picker-e, liste",
+        "hobbyFields": "Email, telefon, parolă, număr, dată, titlu/divider, picker-e, checkbox/radio, liste",
         "advancedFields": "Hartă, semnătură, produse, image picker",
-        "modules": "DigiStorage, surse de date, asset-uri, health",
+        "staticAssets": "Resurse statice",
+        "dataSources": "Surse de date",
+        "digiStorage": "DigiStorage",
         "ddoc": "Export și import .ddoc",
         "fieldImport": "Import și legare câmpuri"
       }
@@ -163,7 +165,7 @@
   },
   "cta": {
     "title": "Gata să îți organizezi documentele?",
-    "subtitle": "Intră în aplicație, creează primul folder și invită echipa în câteva minute.",
+    "subtitle": "Intră în aplicație, creează primul folder și partajează un link în câteva minute.",
     "button": "Deschide aplicația"
   },
   "contact": {
@@ -176,7 +178,7 @@
     "success": "Mulțumim! Mesajul a fost trimis — revenim în curând."
   },
   "footer": {
-    "copyright": "© 2025 Digitaldoc. Toate drepturile rezervate.",
+    "copyright": "© 2026 Digitaldoc. Toate drepturile rezervate.",
     "app": "Aplicație",
     "signIn": "Autentificare",
     "terms": "Termeni și condiții"
