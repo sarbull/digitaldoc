@@ -101,67 +101,139 @@
   },
   "pricing": {
     "title": "Modele de plată",
-    "subtitle": "Începe gratuit, treci pe Hobby pentru câmpuri și PDF, sau alege Pro pentru tot ecosistemul.",
-    "free": {
-      "price": "<strong>0 RON</strong>",
-      "title": "Gratuit",
-      "desc": "Structură de documente cu câmpuri text de bază și linkuri de partajare.",
-      "f1": "Foldere, fișiere și partajare prin link",
-      "f2": "Câmpuri TEXT și TEXTAREA",
-      "f3": "Autentificare inclusă",
-      "ribbon": "★ 30 zile",
-      "ribbonAria": "Șabloane și PDF în primele 30 de zile pe planul Gratuit",
-      "cta": "Începe gratuit"
+    "subtitle": "Începe gratuit, apoi bifează doar câmpurile și modulele de care ai nevoie. Fiecare achiziție este un abonament lunar separat și poți adăuga oricând alte funcții.",
+    "freeLabel": "Gratuit",
+    "totalLabel": "Total lunar",
+    "perMonth": "/ lună",
+    "vatNote": "Prețuri fără TVA.",
+    "cta": "Începe în aplicație",
+    "included": {
+      "title": "Gratuit — inclus mereu",
+      "description": "Fișiere și foldere, partajare oaspete (link + PIN) și autentificare."
     },
-    "hobby": {
-      "price": "<strong>35 RON</strong> · fără TVA / lună",
-      "title": "Hobby",
-      "desc": "Toate câmpurile orientate pe text, plus șabloane și export PDF.",
-      "f1": "Email, telefon, parolă, număr, dată, titlu/divider, picker-e, checkbox/radio, liste",
-      "f2": "Șabloane și export PDF",
-      "f3": "Reînnoire lunară automată, anulare oricând",
-      "cta": "Alege Hobby"
-    },
-    "pro": {
-      "price": "<strong>70 RON</strong> · fără TVA / lună",
-      "title": "Pro",
-      "desc": "Tot produsul: DigiStorage, imagini, surse de date, fișiere .ddoc, import și legare câmpuri, plus câmpuri avansate.",
-      "f1": "Hartă, semnătură, produse și image picker",
-      "f2": "DigiStorage, surse de date și asset-uri statice",
-      "f3": "Export/import .ddoc și import/legare câmpuri",
-      "f4": "Upgrade proratat din Hobby, oricând în ciclu",
-      "cta": "Alege Pro"
-    },
-    "matrix": {
-      "title": "Comparație funcționalități",
-      "feature": "Funcționalitate",
-      "free": "Gratuit",
-      "hobby": "Hobby",
-      "pro": "Pro",
-      "yes": "Da",
-      "no": "—",
-      "trial": "<span class=\"pricing-star\" aria-hidden=\"true\">*</span>",
-      "groups": {
-        "core": "De bază",
-        "textFields": "Câmpuri text",
-        "advancedFields": "Câmpuri avansate",
-        "modules": "Module"
+    "groups": {
+      "fields": {
+        "title": "Câmpuri document",
+        "description": "Fiecare tip de câmp se taxează separat. Selector imagini vine cu DigiStorage.",
+        "selectAll": "Toate câmpurile plătite"
       },
-      "features": {
-        "filesFolders": "Fișiere și foldere",
-        "guestShare": "Partajare prin link",
-        "templatesPdf": "Șabloane și export PDF",
-        "basicText": "TEXT și TEXTAREA",
-        "hobbyFields": "Email, telefon, parolă, număr, dată, titlu/divider, picker-e, checkbox/radio, liste",
-        "advancedFields": "Hartă, semnătură, produse, image picker",
-        "staticAssets": "Resurse statice",
-        "dataSources": "Surse de date",
-        "digiStorage": "DigiStorage",
-        "ddoc": "Export și import .ddoc",
-        "fieldImport": "Import și legare câmpuri"
+      "digiStorage": {
+        "title": "DigiStorage",
+        "description": "Integrare stocare cloud, inclusiv câmpul Selector imagini."
+      },
+      "assets": {
+        "title": "Resurse",
+        "description": "Încarcă și refolosește imagini și alte resurse statice în șabloane."
+      },
+      "pdf": {
+        "title": "PDF",
+        "description": "Editorul HTML și descărcarea PDF sunt gratuite; previzualizarea PDF și editorul vizual se plătesc."
+      },
+      "misc": {
+        "title": "Diverse",
+        "description": "Surse de date, import și export .ddoc, import și legare câmpuri."
       }
     },
-    "footnote": "<span class=\"pricing-star\" aria-hidden=\"true\">*</span> Conturile noi pe planul Gratuit includ șabloanele și exportul PDF în primele 30 de zile de la creare."
+    "modules": {
+      "digiStorage": {
+        "title": "DigiStorage + Selector imagini",
+        "desc": "Conectează foldere DigiStorage și folosește Selector imagini pe documente."
+      },
+      "assets": {
+        "title": "Resurse statice",
+        "desc": "Încarcă imagini și gestionează resursele din șabloane."
+      },
+      "htmlEditor": {
+        "title": "Editor HTML (v1)",
+        "desc": "Editează șabloanele direct în cod HTML."
+      },
+      "pdfDownload": {
+        "title": "Descărcare PDF",
+        "desc": "Descarcă documentele ca PDF, inclusiv din linkurile de partajare."
+      },
+      "pdfEditor": {
+        "title": "Previzualizare PDF și editor",
+        "desc": "Previzualizează PDF-urile generate și editează șabloanele vizual."
+      },
+      "misc": {
+        "title": "Funcții diverse",
+        "desc": "Refolosește valori din surse de date, importă și exportă fișiere .ddoc și importă și leagă câmpuri între documente."
+      }
+    },
+    "fields": {
+      "TEXT": {
+        "title": "Text",
+        "desc": "Text pe un singur rând pentru nume, titluri și răspunsuri scurte."
+      },
+      "TEXTAREA": {
+        "title": "Zonă text",
+        "desc": "Text pe mai multe rânduri pentru note, comentarii și conținut mai lung."
+      },
+      "DIVIDER": {
+        "title": "Separator",
+        "desc": "Separator vizual între secțiuni în formular."
+      },
+      "EMAIL": {
+        "title": "Email",
+        "desc": "Adresă de email cu validare de format de bază."
+      },
+      "PHONE": {
+        "title": "Telefon",
+        "desc": "Câmp pentru număr de telefon / date de contact."
+      },
+      "PASSWORD": {
+        "title": "Parolă",
+        "desc": "Câmp mascat pentru secrete sau coduri de acces."
+      },
+      "NUMBER": {
+        "title": "Număr",
+        "desc": "Valori numerice, cu limite opționale min/max."
+      },
+      "DATE": {
+        "title": "Dată",
+        "desc": "Selector de dată pentru termene, zile de naștere și programări."
+      },
+      "TITLE": {
+        "title": "Titlu",
+        "desc": "Titlu de secțiune afișat pe formular (doar afișare)."
+      },
+      "DISCLAIMER": {
+        "title": "Disclaimer",
+        "desc": "Notă legală sau informativă pe formular (doar afișare)."
+      },
+      "PICKER": {
+        "title": "Selector",
+        "desc": "Listă derulantă pentru a alege o singură opțiune."
+      },
+      "MULTI_LEVEL_PICKER": {
+        "title": "Selector multi-nivel",
+        "desc": "Liste derulante în cascadă pentru alegeri ierarhice."
+      },
+      "CHECKBOX": {
+        "title": "Bifă",
+        "desc": "Una sau mai multe opțiuni pe care utilizatorul le poate bifa."
+      },
+      "RADIO": {
+        "title": "Radio",
+        "desc": "Alege exact o opțiune dintr-un set."
+      },
+      "INFINITE_LIST": {
+        "title": "Listă infinită",
+        "desc": "Rânduri repetabile (tabele) cu câmpuri copil imbricate."
+      },
+      "MAP": {
+        "title": "Hartă",
+        "desc": "Plasează un pin pe hartă pentru a captura o locație."
+      },
+      "SIGNATURE": {
+        "title": "Semnătură",
+        "desc": "Desenează sau capturează o semnătură olografă."
+      },
+      "PRODUCTS": {
+        "title": "Produse",
+        "desc": "Linii de produse pentru oferte și comenzi."
+      }
+    }
   },
   "cta": {
     "title": "Gata să îți organizezi documentele?",
@@ -170,7 +242,7 @@
   },
   "contact": {
     "title": "Contact",
-    "subtitle": "Întrebări despre demo, Hobby, Pro sau parteneriat? Scrie-ne.",
+    "subtitle": "Întrebări despre demo, prețuri sau parteneriat? Scrie-ne.",
     "namePlaceholder": "Numele tău",
     "emailPlaceholder": "Email",
     "messagePlaceholder": "Mesajul tău",
