@@ -132,6 +132,14 @@
       "misc": {
         "title": "Misc",
         "description": "Data sources, .ddoc import & export, and field import & linking."
+      },
+      "medicalFiles": {
+        "title": "DICOM & STL",
+        "description": "Upload medical imaging (.dcm) and 3D models (.stl) into your documents and view them in the app. Files use your storage."
+      },
+      "storage": {
+        "title": "Storage",
+        "description": "Documents, DICOM & STL files and static assets share the same space. Pick one tier."
       }
     },
     "modules": {
@@ -158,6 +166,10 @@
       "misc": {
         "title": "Misc features",
         "desc": "Reuse values from data sources, import and export .ddoc files, and import & link fields between documents."
+      },
+      "medicalFiles": {
+        "title": "DICOM & STL files",
+        "desc": "Upload .dcm and .stl files and open them in the built-in 2D / 3D viewer."
       }
     },
     "fields": {
@@ -232,6 +244,24 @@
       "PRODUCTS": {
         "title": "Products",
         "desc": "Line items with product details for quotes and orders."
+      }
+    },
+    "storage": {
+      "free": {
+        "title": "1 GB free",
+        "desc": "Included with every account."
+      },
+      "tier5": {
+        "title": "5 GB of storage",
+        "desc": "Store up to 5 GB of documents, DICOM & STL files and assets."
+      },
+      "tier10": {
+        "title": "10 GB of storage",
+        "desc": "Store up to 10 GB of documents, DICOM & STL files and assets."
+      },
+      "tier20": {
+        "title": "20 GB of storage",
+        "desc": "Store up to 20 GB of documents, DICOM & STL files and assets."
       }
     }
   },

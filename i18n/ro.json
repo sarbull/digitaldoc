@@ -132,6 +132,14 @@
       "misc": {
         "title": "Diverse",
         "description": "Surse de date, import și export .ddoc, import și legare câmpuri."
+      },
+      "medicalFiles": {
+        "title": "DICOM și STL",
+        "description": "Încarcă imagistică medicală (.dcm) și modele 3D (.stl) în documente și vizualizează-le în aplicație. Fișierele folosesc spațiul de stocare."
+      },
+      "storage": {
+        "title": "Spațiu de stocare",
+        "description": "Documentele, fișierele DICOM și STL și resursele statice folosesc același spațiu. Alege un singur nivel."
       }
     },
     "modules": {
@@ -158,6 +166,10 @@
       "misc": {
         "title": "Funcții diverse",
         "desc": "Refolosește valori din surse de date, importă și exportă fișiere .ddoc și importă și leagă câmpuri între documente."
+      },
+      "medicalFiles": {
+        "title": "Fișiere DICOM și STL",
+        "desc": "Încarcă fișiere .dcm și .stl și deschide-le în vizualizatorul 2D / 3D integrat."
       }
     },
     "fields": {
@@ -232,6 +244,24 @@
       "PRODUCTS": {
         "title": "Produse",
         "desc": "Linii de produse pentru oferte și comenzi."
+      }
+    },
+    "storage": {
+      "free": {
+        "title": "1 GB gratuit",
+        "desc": "Inclus în fiecare cont."
+      },
+      "tier5": {
+        "title": "5 GB spațiu de stocare",
+        "desc": "Stochează până la 5 GB de documente, fișiere DICOM și STL și resurse."
+      },
+      "tier10": {
+        "title": "10 GB spațiu de stocare",
+        "desc": "Stochează până la 10 GB de documente, fișiere DICOM și STL și resurse."
+      },
+      "tier20": {
+        "title": "20 GB spațiu de stocare",
+        "desc": "Stochează până la 20 GB de documente, fișiere DICOM și STL și resurse."
       }
     }
   },
