@@ -140,6 +140,9 @@
       "storage": {
         "title": "Storage",
         "description": "Documents, DICOM & STL files and static assets share the same space. Pick one tier."
+      },
+      "contexto": {
+        "description": "Assistant for WhatsApp Business groups."
       }
     },
     "modules": {
@@ -170,6 +173,9 @@
       "medicalFiles": {
         "title": "DICOM & STL files",
         "desc": "Upload .dcm and .stl files and open them in the built-in 2D / 3D viewer."
+      },
+      "contexto": {
+        "desc": "Summaries and custom skills. Bring your own OpenAI key; API usage is billed separately."
       }
     },
     "fields": {

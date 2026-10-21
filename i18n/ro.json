@@ -140,6 +140,9 @@
       "storage": {
         "title": "Spațiu de stocare",
         "description": "Documentele, fișierele DICOM și STL și resursele statice folosesc același spațiu. Alege un singur nivel."
+      },
+      "contexto": {
+        "description": "Asistent pentru grupurile WhatsApp Business."
       }
     },
     "modules": {
@@ -170,6 +173,9 @@
       "medicalFiles": {
         "title": "Fișiere DICOM și STL",
         "desc": "Încarcă fișiere .dcm și .stl și deschide-le în vizualizatorul 2D / 3D integrat."
+      },
+      "contexto": {
+        "desc": "Rezumate și abilități personalizate. Cheie OpenAI proprie; utilizarea API se plătește separat."
       }
     },
     "fields": {
