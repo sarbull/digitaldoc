@@ -143,6 +143,10 @@
       },
       "contexto": {
         "description": "Asistent pentru grupurile WhatsApp Business."
+      },
+      "documentScan": {
+        "title": "Scanare documente",
+        "description": "Scanează imaginea unui document și salvează textul extras ca document nou. Imaginea nu este stocată."
       }
     },
     "modules": {
@@ -176,6 +180,10 @@
       },
       "contexto": {
         "desc": "Rezumate și abilități personalizate. Cheie OpenAI proprie; utilizarea API se plătește separat."
+      },
+      "documentScan": {
+        "title": "Scanare documente",
+        "desc": "Scanează imaginea unui document prin motorul OCR și salvează textul extras ca document nou."
       }
     },
     "fields": {
