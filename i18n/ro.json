@@ -258,6 +258,10 @@
       "PRODUCTS": {
         "title": "Produse",
         "desc": "Linii de produse pentru oferte și comenzi."
+      },
+      "TABLE_INPUT": {
+        "title": "Tabel",
+        "desc": "Un tabel cu coloanele definite de tine; cei care completează documentul adaugă rânduri."
       }
     },
     "storage": {

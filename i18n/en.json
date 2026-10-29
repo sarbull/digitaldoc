@@ -258,6 +258,10 @@
       "PRODUCTS": {
         "title": "Products",
         "desc": "Line items with product details for quotes and orders."
+      },
+      "TABLE_INPUT": {
+        "title": "Table input",
+        "desc": "A table with columns you define; people filling the document add rows."
       }
     },
     "storage": {
