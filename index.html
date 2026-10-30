@@ -908,6 +908,7 @@
 
     .footer-links {
       display: flex;
+      flex-wrap: wrap;
       gap: 1.5rem;
       list-style: none;
     }
@@ -931,7 +932,9 @@
       }
 
       .logo-link img {
-        height: 32px;
+        max-width: 100%;
+        max-height: 32px;
+        height: auto;
       }
 
       .header-bar-end {
@@ -961,7 +964,7 @@
 
       .site-header.nav-open .header-inner {
         display: grid;
-        grid-template-columns: 1fr auto;
+        grid-template-columns: minmax(0, 1fr) auto;
         grid-template-rows: var(--header-h) minmax(0, 1fr);
         align-items: stretch;
         width: 100%;
