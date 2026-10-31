@@ -35,6 +35,31 @@
       document.documentElement.dataset.themePreference = pref;
     })();
   </script>
+  <script>
+    (function () {
+      var seasonTimer;
+
+      function updateSeason() {
+        var now = new Date();
+        if (now.getMonth() === 9 && now.getDate() === 31) {
+          document.documentElement.dataset.season = 'halloween';
+        } else {
+          delete document.documentElement.dataset.season;
+        }
+
+        // Recheck at local midnight, including tabs left open overnight.
+        clearTimeout(seasonTimer);
+        var tomorrow = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1);
+        seasonTimer = setTimeout(updateSeason, tomorrow.getTime() - now.getTime() + 50);
+      }
+
+      updateSeason();
+      window.addEventListener('pageshow', updateSeason);
+      document.addEventListener('visibilitychange', function () {
+        if (!document.hidden) updateSeason();
+      });
+    })();
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Digitaldoc — Dosare, documente și partajare prin link</title>
   <meta name="description" content="Digitaldoc: organizează documente în foldere, editează conținut bogat, previzualizează PDF și partajează cu un link. Autentificare Google sau parolă.">
@@ -111,6 +136,103 @@
       --form-success-text: #8ce99a;
       --shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
       --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.45);
+    }
+
+    /* October 31 only; the date is checked before the page is painted. */
+    :root[data-season="halloween"] {
+      --brand: #713798;
+      --brand-hover: #552372;
+      --brand-soft: #f5eaf9;
+      --brand-glow: rgba(113, 55, 152, 0.16);
+      --hero-accent: rgba(238, 137, 50, 0.22);
+      --border: #e8d9e4;
+      --surface: #fffaf5;
+      --surface-alt: #fff1e4;
+      --header-bg: rgba(255, 250, 245, 0.94);
+      --footer-bg: #24172f;
+    }
+
+    :root[data-season="halloween"][data-theme="dark"] {
+      --brand: #ffb36b;
+      --brand-hover: #ffc58e;
+      --brand-soft: #38233f;
+      --brand-glow: rgba(255, 179, 107, 0.16);
+      --hero-accent: rgba(167, 100, 216, 0.2);
+      --border: #51394f;
+      --surface: #211827;
+      --surface-alt: #2b1e32;
+      --header-bg: rgba(33, 24, 39, 0.94);
+      --footer-bg: #17101d;
+    }
+
+    .halloween-greeting,
+    .halloween-web {
+      display: none;
+    }
+
+    [data-season="halloween"] .halloween-greeting {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      width: fit-content;
+      max-width: 100%;
+      margin-bottom: 1.25rem;
+      padding: 0.4rem 1.1rem 0.4rem 0.45rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      background: var(--surface);
+      box-shadow: 0 6px 24px var(--hero-accent);
+      color: var(--brand);
+    }
+
+    .halloween-greeting > svg {
+      width: 104px;
+      height: 68px;
+      flex-shrink: 0;
+    }
+
+    .halloween-greeting span {
+      display: block;
+      color: var(--text-muted);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+    }
+
+    .halloween-greeting strong {
+      display: block;
+      font-size: 1.2rem;
+      line-height: 1.25;
+    }
+
+    [data-season="halloween"] .halloween-web {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 24%;
+      max-width: 120px;
+      height: auto;
+      color: #713798;
+      opacity: 0.45;
+      pointer-events: none;
+    }
+
+    [data-season="halloween"] .hero-visual {
+      outline: 2px solid var(--brand-glow);
+    }
+
+    [data-season="halloween"][data-theme="dark"] .btn-primary {
+      color: #211827;
+    }
+
+    [data-season="halloween"][data-theme="dark"] .cta-band .btn-primary {
+      background: var(--brand);
+      color: #211827;
+    }
+
+    [data-season="halloween"] .cta-band {
+      background: #38233f;
     }
 
     html { scroll-behavior: smooth; }
@@ -1122,6 +1244,32 @@
       <div class="hero-bg" aria-hidden="true"></div>
       <div class="container hero-grid">
         <div class="hero-copy">
+          <div class="halloween-greeting">
+            <svg viewBox="0 0 132 86" fill="none" aria-hidden="true" focusable="false">
+              <!-- Moon, bat, and a little ghost above the pumpkin patch. -->
+              <circle cx="101" cy="23" r="17" fill="#ffe4a1"/>
+              <path d="M86 15c5-9 10-10 14-9l-1 7 5-3 5 3-1-7c5-1 10 2 13 9-8-3-12 0-17 5-5-5-10-8-18-5Z" fill="#38233f"/>
+              <path d="M54 44V28a14 14 0 0 1 28 0v23l-7-4-7 4-7-4-7 4v-7Z" fill="#fffaf5" stroke="#b9a0cb" stroke-width="2" stroke-linejoin="round"/>
+              <ellipse cx="64" cy="29" rx="2" ry="3" fill="#38233f"/>
+              <ellipse cx="74" cy="29" rx="2" ry="3" fill="#38233f"/>
+              <path d="M66 38q3 3 6 0" stroke="#38233f" stroke-width="2" stroke-linecap="round"/>
+              <ellipse cx="65" cy="77" rx="57" ry="5" fill="#713798" opacity="0.12"/>
+              <!-- Two jack-o'-lanterns, with separate lobes and carved faces. -->
+              <path d="M36 45q-2-10 5-14" stroke="#547344" stroke-width="5" stroke-linecap="round"/>
+              <path d="M31 39q-11-11-18-3 6 10 18 3Z" fill="#79965a"/>
+              <ellipse cx="24" cy="60" rx="17" ry="19" fill="#ee8733"/>
+              <ellipse cx="48" cy="60" rx="17" ry="19" fill="#ee8733"/>
+              <ellipse cx="36" cy="60" rx="17" ry="20" fill="#ffa34b"/>
+              <path d="m23 58 7-8 4 9Zm15 1 5-9 7 8ZM24 65l7 3 5-3 5 3 8-3q-10 17-25 0Z" fill="#38233f"/>
+              <path d="M96 52q-1-8 4-11" stroke="#547344" stroke-width="4" stroke-linecap="round"/>
+              <ellipse cx="85" cy="65" rx="14" ry="14" fill="#db702a"/>
+              <ellipse cx="107" cy="65" rx="14" ry="14" fill="#db702a"/>
+              <ellipse cx="96" cy="65" rx="14" ry="15" fill="#f4933c"/>
+              <path d="m85 63 5-5 3 6Zm14 1 3-6 5 5ZM87 69q9 9 18 0" fill="#38233f"/>
+              <path d="m14 15 2 4 4 2-4 2-2 4-2-4-4-2 4-2Zm31-8 1 3 3 1-3 1-1 3-1-3-3-1 3-1Z" fill="#b389cb"/>
+            </svg>
+            <div><span>31 OCT</span><strong>Halloween</strong></div>
+          </div>
           <span class="hero-badge" data-i18n="hero.badge">Management documentar în cloud</span>
           <h1 data-i18n="hero.title">Dosare, documente și partajare simplă</h1>
           <p class="hero-lead" data-i18n="hero.lead">
@@ -1157,6 +1305,10 @@
             loading="eager"
             decoding="async"
           >
+          <svg class="halloween-web" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false">
+            <path d="M120 0H0m120 0L9 46M120 0 35 85M120 0 74 111M120 0v120"/>
+            <path d="M96 0q0 9 2 9t5 8q4 2 8 5t9 2M72 0q0 17 4 18t10 16q8 4 16 10t18 4M48 0q0 26 6 27t15 24q12 6 24 15t27 6M24 0q0 35 8 36t20 32q16 8 32 20t36 8M0 0q0 43 10 45t25 40q20 10 40 25t45 10"/>
+          </svg>
         </figure>
       </div>
     </section>
