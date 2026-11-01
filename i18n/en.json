@@ -146,7 +146,11 @@
       },
       "documentScan": {
         "title": "Document scanning",
-        "description": "Scan a document image and save the extracted text as a new document. The image is not stored."
+        "description": "Scan a document image and save the extracted text as a new document. Digitaldoc does not store the image. On top of the monthly subscription, you pay for the tokens you use, whether on DigitaldocAI infrastructure or with an external model."
+      },
+      "documentEditWithAi": {
+        "title": "Document editing with AI",
+        "description": "AI Chat edits your document templates. On top of the monthly subscription, you pay for the tokens you use, whether on DigitaldocAI infrastructure or with an external model."
       }
     },
     "modules": {
@@ -183,7 +187,11 @@
       },
       "documentScan": {
         "title": "Document scanning",
-        "desc": "Scan a document image through the OCR engine and save the extracted text as a new document."
+        "desc": "Scan a document image with the AI provider chosen in Settings and save the extracted text as a new document. DigitaldocAI: 100 RON / 1,000,000 tokens (input + output), from prepaid credits. External model (your own OpenAI key): the provider's rates, billed directly by the provider."
+      },
+      "documentEditWithAi": {
+        "title": "Document editing with AI",
+        "desc": "AI Chat in the document preview: create and edit templates. DigitaldocAI: 100 RON / 1,000,000 tokens (input + output), from prepaid credits. External model (your own OpenAI key): the provider's rates, billed directly by the provider."
       }
     },
     "fields": {
