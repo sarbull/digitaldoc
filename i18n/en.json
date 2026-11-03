@@ -107,14 +107,14 @@
     "perMonth": "/ month",
     "vatNote": "Prices shown are final. We are not registered for VAT.",
     "cta": "Start in the app",
-    "included": {
-      "title": "Free — always included",
-      "description": "Files & folders, PDF uploads and merging, guest share (link + PIN), and authentication. Includes 1 GB of storage."
-    },
     "groups": {
+      "core": {
+        "title": "Account & documents",
+        "description": "Account access, document organization and sharing."
+      },
       "fields": {
         "title": "Document fields",
-        "description": "Each field type is billed separately. Image picker comes with DigiStorage.",
+        "description": "Each field type is billed separately. Image picker is part of DigiStorage.",
         "selectAll": "All paid fields"
       },
       "digiStorage": {
@@ -123,11 +123,11 @@
       },
       "assets": {
         "title": "Assets",
-        "description": "Upload and reuse images and other static assets in templates."
+        "description": "Upload images, view them in your document tree and reuse them in templates."
       },
       "pdf": {
         "title": "PDF",
-        "description": "PDF uploads, viewing, downloads, and merging are free within your storage quota, as are the HTML editor and generated PDF downloads. Generated document PDF preview and the visual template editor are paid."
+        "description": "PDF upload, viewing, download and merging are free within your storage quota, along with the HTML editor and document PDF download. Generated document PDF preview and the visual template editor are paid."
       },
       "misc": {
         "title": "Misc",
@@ -139,10 +139,11 @@
       },
       "storage": {
         "title": "Storage",
-        "description": "Documents, uploaded PDFs and merged copies, DICOM & STL files, and static assets share the same space. Includes 1 GB free. Pick one tier."
+        "description": "Documents, uploaded and merged PDFs, DICOM & STL files and static assets share your storage. Every account has 1 GB free; your biggest tier counts."
       },
       "contexto": {
-        "description": "Assistant for WhatsApp Business groups."
+        "title": "Contexto",
+        "description": "WhatsApp group assistant using the AI provider chosen in Settings. AI token usage is billed separately from the subscription."
       },
       "documentScan": {
         "title": "Document scanning",
@@ -150,17 +151,29 @@
       },
       "documentEditWithAi": {
         "title": "Document editing with AI",
-        "description": "AI Chat edits your document templates. On top of the monthly subscription, you pay for the tokens you use, whether on DigitaldocAI infrastructure or with an external model."
+        "description": "AI Chat edits your document templates with the provider chosen in Settings. AI token usage is billed separately from the subscription."
       }
     },
     "modules": {
+      "documents": {
+        "title": "Files & folders",
+        "desc": "Create documents and organize them in folders."
+      },
+      "guestShare": {
+        "title": "Guest sharing",
+        "desc": "Share published documents and folders using a link and PIN."
+      },
+      "authentication": {
+        "title": "Account & sign-in",
+        "desc": "Create an account and sign in with Google or a password."
+      },
       "digiStorage": {
         "title": "DigiStorage + Image picker",
         "desc": "Connect DigiStorage folders and use Image picker on documents."
       },
       "assets": {
         "title": "Static assets",
-        "desc": "Upload images and manage template assets."
+        "desc": "Upload JPEG, PNG or GIF images, view and download them, and reuse stored images in templates. Files use your storage quota."
       },
       "htmlEditor": {
         "title": "HTML Editor (v1)",
@@ -170,13 +183,9 @@
         "title": "PDF download",
         "desc": "Download documents as PDF, including from share links."
       },
-      "pdfFiles": {
-        "title": "PDF uploads and merging",
-        "desc": "Upload, view, download, and merge PDFs without a subscription. Choose the order and keep the originals. Uploaded files and merged copies use your storage quota, with 1 GB included free."
-      },
       "pdfEditor": {
         "title": "Generated PDF preview & template editor",
-        "desc": "Preview generated PDFs and edit templates visually."
+        "desc": "Preview PDFs generated from document templates and edit templates visually (v2). Uploaded PDF previews are free."
       },
       "misc": {
         "title": "Misc features",
@@ -187,7 +196,8 @@
         "desc": "Upload .dcm and .stl files and open them in the built-in 2D / 3D viewer."
       },
       "contexto": {
-        "desc": "Summaries and custom skills. Bring your own OpenAI key; API usage is billed separately."
+        "title": "Contexto",
+        "desc": "Replies, summaries and custom skills for WhatsApp groups. Use DigitaldocAI with prepaid credits or your own OpenAI key, as chosen in Settings. AI token usage costs extra: DigitaldocAI uses credits; OpenAI bills your provider account."
       },
       "documentScan": {
         "title": "Document scanning",
@@ -195,7 +205,11 @@
       },
       "documentEditWithAi": {
         "title": "Document editing with AI",
-        "desc": "AI Chat in the document preview: create and edit templates. DigitaldocAI: 100 RON / 1,000,000 tokens (input + output), from prepaid credits. External model (your own OpenAI key): the provider's rates, billed directly by the provider."
+        "desc": "AI Chat in the document preview creates and edits templates using DigitaldocAI or your own OpenAI key. AI token usage costs extra: DigitaldocAI uses prepaid credits; OpenAI bills your provider account."
+      },
+      "pdfFiles": {
+        "title": "PDF uploads & merging",
+        "desc": "Upload one PDF at a time, use its Preview tab and download or merge PDFs. Merge 2–100 PDFs, up to 100 MB and 5,000 pages in total. No subscription or AI credits required. Original files and merged copies use your storage quota."
       }
     },
     "fields": {
@@ -278,20 +292,20 @@
     },
     "storage": {
       "free": {
-        "title": "1 GB free",
+        "title": "1 GB of storage",
         "desc": "Included with every account."
       },
       "tier5": {
         "title": "5 GB of storage",
-        "desc": "Store up to 5 GB of documents, DICOM & STL files and assets."
+        "desc": "Store up to 5 GB of documents, uploaded and merged PDFs, DICOM & STL files and images."
       },
       "tier10": {
         "title": "10 GB of storage",
-        "desc": "Store up to 10 GB of documents, DICOM & STL files and assets."
+        "desc": "Store up to 10 GB of documents, uploaded and merged PDFs, DICOM & STL files and images."
       },
       "tier20": {
         "title": "20 GB of storage",
-        "desc": "Store up to 20 GB of documents, DICOM & STL files and assets."
+        "desc": "Store up to 20 GB of documents, uploaded and merged PDFs, DICOM & STL files and images."
       }
     }
   },

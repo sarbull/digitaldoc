@@ -107,11 +107,11 @@
     "perMonth": "/ lună",
     "vatNote": "Prețurile afișate sunt finale. Nu suntem plătitori de TVA.",
     "cta": "Începe în aplicație",
-    "included": {
-      "title": "Gratuit — inclus mereu",
-      "description": "Fișiere și foldere, încărcare și combinare PDF, partajare oaspete (link + PIN) și autentificare. Include 1 GB de stocare."
-    },
     "groups": {
+      "core": {
+        "title": "Cont și documente",
+        "description": "Acces la cont, organizarea și partajarea documentelor."
+      },
       "fields": {
         "title": "Câmpuri document",
         "description": "Fiecare tip de câmp se taxează separat. Selector imagini vine cu DigiStorage.",
@@ -123,11 +123,11 @@
       },
       "assets": {
         "title": "Resurse",
-        "description": "Încarcă și refolosește imagini și alte resurse statice în șabloane."
+        "description": "Încarcă imagini, vizualizează-le în arborele de documente și refolosește-le în șabloane."
       },
       "pdf": {
         "title": "PDF",
-        "description": "Încărcarea, vizualizarea, descărcarea și combinarea PDF-urilor sunt gratuite în limita spațiului de stocare, la fel ca editorul HTML și descărcarea PDF-urilor generate. Previzualizarea PDF a documentelor generate și editorul vizual de șabloane se plătesc."
+        "description": "Încărcarea, vizualizarea, descărcarea și combinarea PDF-urilor sunt gratuite în limita cotei de stocare, la fel ca editorul HTML și descărcarea documentelor ca PDF. Previzualizarea PDF-urilor generate din șabloane și editorul vizual de șabloane se plătesc."
       },
       "misc": {
         "title": "Diverse",
@@ -139,10 +139,11 @@
       },
       "storage": {
         "title": "Spațiu de stocare",
-        "description": "Documentele, PDF-urile încărcate și copiile combinate, fișierele DICOM și STL și resursele statice folosesc același spațiu. Include 1 GB gratuit. Alege un singur nivel."
+        "description": "Documentele, PDF-urile încărcate și combinate, fișierele DICOM și STL și resursele statice folosesc același spațiu. Fiecare cont are 1 GB gratuit; contează cel mai mare nivel cumpărat."
       },
       "contexto": {
-        "description": "Asistent pentru grupurile WhatsApp Business."
+        "title": "Contexto",
+        "description": "Asistent pentru grupurile WhatsApp, cu furnizorul AI ales în Setări. Tokenii AI se plătesc separat de abonament."
       },
       "documentScan": {
         "title": "Scanare documente",
@@ -150,17 +151,29 @@
       },
       "documentEditWithAi": {
         "title": "Editare documente cu AI",
-        "description": "Chatul AI îți editează șabloanele documentelor. Pe lângă abonamentul lunar, plătești tokenii consumați, fie pe infrastructura DigitaldocAI, fie cu un model extern."
+        "description": "Chatul AI îți editează șabloanele documentelor cu furnizorul ales în Setări. Tokenii AI se plătesc separat de abonament."
       }
     },
     "modules": {
+      "documents": {
+        "title": "Fișiere și foldere",
+        "desc": "Creează documente și organizează-le în foldere."
+      },
+      "guestShare": {
+        "title": "Partajare pentru oaspeți",
+        "desc": "Partajează documente și foldere publicate prin link și PIN."
+      },
+      "authentication": {
+        "title": "Cont și autentificare",
+        "desc": "Creează un cont și autentifică-te cu Google sau cu parolă."
+      },
       "digiStorage": {
         "title": "DigiStorage + Selector imagini",
         "desc": "Conectează foldere DigiStorage și folosește Selector imagini pe documente."
       },
       "assets": {
         "title": "Resurse statice",
-        "desc": "Încarcă imagini și gestionează resursele din șabloane."
+        "desc": "Încarcă imagini JPEG, PNG sau GIF, vizualizează-le, descarcă-le și refolosește imaginile salvate în șabloane. Fișierele folosesc cota de stocare."
       },
       "htmlEditor": {
         "title": "Editor HTML (v1)",
@@ -170,13 +183,9 @@
         "title": "Descărcare PDF",
         "desc": "Descarcă documentele ca PDF, inclusiv din linkurile de partajare."
       },
-      "pdfFiles": {
-        "title": "Încărcare și combinare PDF",
-        "desc": "Încarcă, vizualizează, descarcă și combină PDF-uri fără abonament. Alege ordinea și păstrează originalele. Fișierele încărcate și copiile combinate folosesc spațiul de stocare, cu 1 GB inclus gratuit."
-      },
       "pdfEditor": {
         "title": "Previzualizare PDF generat și editor de șabloane",
-        "desc": "Previzualizează PDF-urile generate și editează șabloanele vizual."
+        "desc": "Previzualizează PDF-urile generate din șabloanele documentelor și editează șabloanele vizual (v2). Previzualizarea PDF-urilor încărcate este gratuită."
       },
       "misc": {
         "title": "Funcții diverse",
@@ -187,7 +196,8 @@
         "desc": "Încarcă fișiere .dcm și .stl și deschide-le în vizualizatorul 2D / 3D integrat."
       },
       "contexto": {
-        "desc": "Rezumate și abilități personalizate. Cheie OpenAI proprie; utilizarea API se plătește separat."
+        "title": "Contexto",
+        "desc": "Răspunsuri, rezumate și abilități personalizate pentru grupurile WhatsApp. Folosește DigitaldocAI cu credite preplătite sau propria cheie OpenAI, conform alegerii din Setări. Tokenii AI costă suplimentar: DigitaldocAI consumă credite; OpenAI facturează contul tău de la furnizor."
       },
       "documentScan": {
         "title": "Scanare documente",
@@ -195,7 +205,11 @@
       },
       "documentEditWithAi": {
         "title": "Editare documente cu AI",
-        "desc": "Chatul AI din previzualizarea documentului: creează și editează șabloane. DigitaldocAI: 100 RON / 1.000.000 de tokeni (intrare + ieșire), din credite preplătite. Model extern (cheia ta OpenAI): tarifele furnizorului, facturate direct de acesta."
+        "desc": "Chatul AI din previzualizarea documentului creează și editează șabloane cu DigitaldocAI sau cu propria cheie OpenAI. Tokenii AI costă suplimentar: DigitaldocAI consumă credite preplătite; OpenAI facturează contul tău de la furnizor."
+      },
+      "pdfFiles": {
+        "title": "Încărcare și combinare PDF",
+        "desc": "Încarcă un singur PDF odată, folosește tabul Previzualizare și descarcă sau combină PDF-uri. Combină 2–100 de PDF-uri, maximum 100 MB și 5.000 de pagini în total. Nu este necesar un abonament sau credite AI. Originalele și copiile combinate folosesc cota de stocare."
       }
     },
     "fields": {
@@ -244,7 +258,7 @@
         "desc": "Listă derulantă pentru a alege o singură opțiune."
       },
       "MULTI_LEVEL_PICKER": {
-        "title": "Selector multi-nivel",
+        "title": "Selector pe niveluri",
         "desc": "Liste derulante în cascadă pentru alegeri ierarhice."
       },
       "CHECKBOX": {
@@ -278,20 +292,20 @@
     },
     "storage": {
       "free": {
-        "title": "1 GB gratuit",
+        "title": "1 GB de stocare",
         "desc": "Inclus în fiecare cont."
       },
       "tier5": {
         "title": "5 GB spațiu de stocare",
-        "desc": "Stochează până la 5 GB de documente, fișiere DICOM și STL și resurse."
+        "desc": "Stochează până la 5 GB de documente, PDF-uri încărcate și combinate, fișiere DICOM și STL și imagini."
       },
       "tier10": {
         "title": "10 GB spațiu de stocare",
-        "desc": "Stochează până la 10 GB de documente, fișiere DICOM și STL și resurse."
+        "desc": "Stochează până la 10 GB de documente, PDF-uri încărcate și combinate, fișiere DICOM și STL și imagini."
       },
       "tier20": {
         "title": "20 GB spațiu de stocare",
-        "desc": "Stochează până la 20 GB de documente, fișiere DICOM și STL și resurse."
+        "desc": "Stochează până la 20 GB de documente, PDF-uri încărcate și combinate, fișiere DICOM și STL și imagini."
       }
     }
   },

@@ -104,6 +104,8 @@
       --switcher-active-bg: #ffffff;
       --form-success-bg: #e6f4ea;
       --form-success-text: #1e6b3a;
+      --free-badge-bg: #d4ddef;
+      --free-badge-text: #001a51;
       --radius: 12px;
       --radius-lg: 20px;
       --shadow: 0 4px 24px rgba(0, 43, 127, 0.08);
@@ -134,6 +136,8 @@
       --switcher-active-bg: #373a40;
       --form-success-bg: #1a3324;
       --form-success-text: #8ce99a;
+      --free-badge-bg: rgba(80, 110, 191, 0.2);
+      --free-badge-text: #a8b8df;
       --shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
       --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.45);
     }
@@ -779,12 +783,10 @@
       border-radius: var(--radius-lg);
     }
 
-    .pricing-included,
     .pricing-group {
       margin-bottom: 1.5rem;
     }
 
-    .pricing-included h3,
     .pricing-group h3 {
       font-size: 1.05rem;
       font-weight: 600;
@@ -792,7 +794,6 @@
       margin: 0 0 0.35rem;
     }
 
-    .pricing-included > p,
     .pricing-group > p {
       font-size: 0.9rem;
       color: var(--text-muted);
@@ -848,8 +849,24 @@
       padding-top: 0.15rem;
     }
 
-    .pricing-option--free .pricing-option__price {
-      color: var(--brand);
+    .pricing-option--free {
+      grid-template-columns: auto minmax(0, 1fr);
+    }
+
+    .pricing-free-badge {
+      display: inline-flex;
+      align-items: center;
+      margin-inline-start: 0.4rem;
+      padding: 0.1rem 0.45rem;
+      border-radius: 999px;
+      background: var(--free-badge-bg);
+      color: var(--free-badge-text);
+      font-size: 0.65rem;
+      font-weight: 700;
+      line-height: 1.3;
+      text-transform: uppercase;
+      vertical-align: middle;
+      white-space: nowrap;
     }
 
     .pricing-option--master {
@@ -1447,47 +1464,82 @@
         </div>
 
         <div class="pricing-builder" id="pricing-builder">
-          <div class="pricing-included">
-            <h3 data-i18n="pricing.included.title">Gratuit — inclus mereu</h3>
-            <p data-i18n="pricing.included.description">Fișiere și foldere, încărcare și combinare PDF, partajare oaspete (link + PIN) și autentificare. Include 1 GB de stocare.</p>
-            <label class="pricing-option pricing-option--free">
+          <div class="pricing-group" data-feature-group="core">
+            <h3 data-i18n="pricing.groups.core.title">Cont și documente</h3>
+            <p data-i18n="pricing.groups.core.description">Acces la cont, organizarea și partajarea documentelor.</p>
+            <label class="pricing-option pricing-option--free" data-feature-code="documents">
               <input type="checkbox" checked disabled>
               <span class="pricing-option__body">
-                <span class="pricing-option__title" data-i18n="pricing.fields.TEXT.title">Text</span>
-                <span class="pricing-option__desc" data-i18n="pricing.fields.TEXT.desc">Text pe un singur rând pentru nume, titluri și răspunsuri scurte.</span>
+                <span class="pricing-option__title">
+                  <span data-i18n="pricing.modules.documents.title">Fișiere și foldere</span>
+                  <span class="pricing-free-badge" data-i18n="pricing.freeLabel">Gratuit</span>
+                </span>
+                <span class="pricing-option__desc" data-i18n="pricing.modules.documents.desc">Creează documente și organizează-le în foldere.</span>
               </span>
-              <span class="pricing-option__price" data-i18n="pricing.freeLabel">Gratuit</span>
             </label>
-            <label class="pricing-option pricing-option--free">
+            <label class="pricing-option pricing-option--free" data-feature-code="guestShare">
               <input type="checkbox" checked disabled>
               <span class="pricing-option__body">
-                <span class="pricing-option__title" data-i18n="pricing.fields.TEXTAREA.title">Zonă text</span>
-                <span class="pricing-option__desc" data-i18n="pricing.fields.TEXTAREA.desc">Text pe mai multe rânduri pentru note, comentarii și conținut mai lung.</span>
+                <span class="pricing-option__title">
+                  <span data-i18n="pricing.modules.guestShare.title">Partajare pentru oaspeți</span>
+                  <span class="pricing-free-badge" data-i18n="pricing.freeLabel">Gratuit</span>
+                </span>
+                <span class="pricing-option__desc" data-i18n="pricing.modules.guestShare.desc">Partajează documente și foldere publicate prin link și PIN.</span>
               </span>
-              <span class="pricing-option__price" data-i18n="pricing.freeLabel">Gratuit</span>
             </label>
-            <label class="pricing-option pricing-option--free">
+            <label class="pricing-option pricing-option--free" data-feature-code="authentication">
               <input type="checkbox" checked disabled>
               <span class="pricing-option__body">
-                <span class="pricing-option__title" data-i18n="pricing.fields.DIVIDER.title">Separator</span>
-                <span class="pricing-option__desc" data-i18n="pricing.fields.DIVIDER.desc">Separator vizual între secțiuni în formular.</span>
+                <span class="pricing-option__title">
+                  <span data-i18n="pricing.modules.authentication.title">Cont și autentificare</span>
+                  <span class="pricing-free-badge" data-i18n="pricing.freeLabel">Gratuit</span>
+                </span>
+                <span class="pricing-option__desc" data-i18n="pricing.modules.authentication.desc">Creează un cont și autentifică-te cu Google sau cu parolă.</span>
               </span>
-              <span class="pricing-option__price" data-i18n="pricing.freeLabel">Gratuit</span>
             </label>
           </div>
 
-          <div class="pricing-group">
+          <div class="pricing-group" data-feature-group="fields">
             <h3 data-i18n="pricing.groups.fields.title">Câmpuri document</h3>
-            <p data-i18n="pricing.groups.fields.description">Fiecare tip de câmp se taxează separat. Selectorul de imagini vine cu DigiStorage.</p>
+            <p data-i18n="pricing.groups.fields.description">Fiecare tip de câmp se taxează separat. Selector imagini vine cu DigiStorage.</p>
             <label class="pricing-option pricing-option--master">
               <input type="checkbox" id="pricing-select-all-fields" data-pricing-select-all="fields">
               <span class="pricing-option__body">
                 <span class="pricing-option__title" data-i18n="pricing.groups.fields.selectAll">Toate câmpurile plătite</span>
               </span>
-              <span class="pricing-option__price"></span>
             </label>
             <div class="pricing-fields-list">
-              <label class="pricing-option">
+              <label class="pricing-option pricing-option--free" data-feature-code="field:TEXT">
+                <input type="checkbox" checked disabled>
+                <span class="pricing-option__body">
+                  <span class="pricing-option__title">
+                    <span data-i18n="pricing.fields.TEXT.title">Text</span>
+                    <span class="pricing-free-badge" data-i18n="pricing.freeLabel">Gratuit</span>
+                  </span>
+                  <span class="pricing-option__desc" data-i18n="pricing.fields.TEXT.desc">Text pe un singur rând pentru nume, titluri și răspunsuri scurte.</span>
+                </span>
+              </label>
+              <label class="pricing-option pricing-option--free" data-feature-code="field:TEXTAREA">
+                <input type="checkbox" checked disabled>
+                <span class="pricing-option__body">
+                  <span class="pricing-option__title">
+                    <span data-i18n="pricing.fields.TEXTAREA.title">Zonă text</span>
+                    <span class="pricing-free-badge" data-i18n="pricing.freeLabel">Gratuit</span>
+                  </span>
+                  <span class="pricing-option__desc" data-i18n="pricing.fields.TEXTAREA.desc">Text pe mai multe rânduri pentru note, comentarii și conținut mai lung.</span>
+                </span>
+              </label>
+              <label class="pricing-option pricing-option--free" data-feature-code="field:DIVIDER">
+                <input type="checkbox" checked disabled>
+                <span class="pricing-option__body">
+                  <span class="pricing-option__title">
+                    <span data-i18n="pricing.fields.DIVIDER.title">Separator</span>
+                    <span class="pricing-free-badge" data-i18n="pricing.freeLabel">Gratuit</span>
+                  </span>
+                  <span class="pricing-option__desc" data-i18n="pricing.fields.DIVIDER.desc">Separator vizual între secțiuni în formular.</span>
+                </span>
+              </label>
+              <label class="pricing-option" data-feature-code="field:EMAIL">
                 <input type="checkbox" data-pricing-addon data-group="fields" data-amount-minor="250">
                 <span class="pricing-option__body">
                   <span class="pricing-option__title" data-i18n="pricing.fields.EMAIL.title">Email</span>
@@ -1495,7 +1547,7 @@
                 </span>
                 <span class="pricing-option__price">2.50 RON</span>
               </label>
-              <label class="pricing-option">
+              <label class="pricing-option" data-feature-code="field:PHONE">
                 <input type="checkbox" data-pricing-addon data-group="fields" data-amount-minor="250">
                 <span class="pricing-option__body">
                   <span class="pricing-option__title" data-i18n="pricing.fields.PHONE.title">Telefon</span>
@@ -1503,7 +1555,7 @@
                 </span>
                 <span class="pricing-option__price">2.50 RON</span>
               </label>
-              <label class="pricing-option">
+              <label class="pricing-option" data-feature-code="field:PASSWORD">
                 <input type="checkbox" data-pricing-addon data-group="fields" data-amount-minor="250">
                 <span class="pricing-option__body">
                   <span class="pricing-option__title" data-i18n="pricing.fields.PASSWORD.title">Parolă</span>
@@ -1511,7 +1563,7 @@
                 </span>
                 <span class="pricing-option__price">2.50 RON</span>
               </label>
-              <label class="pricing-option">
+              <label class="pricing-option" data-feature-code="field:NUMBER">
                 <input type="checkbox" data-pricing-addon data-group="fields" data-amount-minor="250">
                 <span class="pricing-option__body">
                   <span class="pricing-option__title" data-i18n="pricing.fields.NUMBER.title">Număr</span>
@@ -1519,7 +1571,7 @@
                 </span>
                 <span class="pricing-option__price">2.50 RON</span>
               </label>
-              <label class="pricing-option">
+              <label class="pricing-option" data-feature-code="field:DATE">
                 <input type="checkbox" data-pricing-addon data-group="fields" data-amount-minor="250">
                 <span class="pricing-option__body">
                   <span class="pricing-option__title" data-i18n="pricing.fields.DATE.title">Dată</span>
@@ -1527,7 +1579,7 @@
                 </span>
                 <span class="pricing-option__price">2.50 RON</span>
               </label>
-              <label class="pricing-option">
+              <label class="pricing-option" data-feature-code="field:TITLE">
                 <input type="checkbox" data-pricing-addon data-group="fields" data-amount-minor="250">
                 <span class="pricing-option__body">
                   <span class="pricing-option__title" data-i18n="pricing.fields.TITLE.title">Titlu</span>
@@ -1535,7 +1587,7 @@
                 </span>
                 <span class="pricing-option__price">2.50 RON</span>
               </label>
-              <label class="pricing-option">
+              <label class="pricing-option" data-feature-code="field:DISCLAIMER">
                 <input type="checkbox" data-pricing-addon data-group="fields" data-amount-minor="250">
                 <span class="pricing-option__body">
                   <span class="pricing-option__title" data-i18n="pricing.fields.DISCLAIMER.title">Disclaimer</span>
@@ -1543,7 +1595,7 @@
                 </span>
                 <span class="pricing-option__price">2.50 RON</span>
               </label>
-              <label class="pricing-option">
+              <label class="pricing-option" data-feature-code="field:PICKER">
                 <input type="checkbox" data-pricing-addon data-group="fields" data-amount-minor="250">
                 <span class="pricing-option__body">
                   <span class="pricing-option__title" data-i18n="pricing.fields.PICKER.title">Selector</span>
@@ -1551,15 +1603,15 @@
                 </span>
                 <span class="pricing-option__price">2.50 RON</span>
               </label>
-              <label class="pricing-option">
+              <label class="pricing-option" data-feature-code="field:MULTI_LEVEL_PICKER">
                 <input type="checkbox" data-pricing-addon data-group="fields" data-amount-minor="250">
                 <span class="pricing-option__body">
-                  <span class="pricing-option__title" data-i18n="pricing.fields.MULTI_LEVEL_PICKER.title">Selector multi-nivel</span>
+                  <span class="pricing-option__title" data-i18n="pricing.fields.MULTI_LEVEL_PICKER.title">Selector pe niveluri</span>
                   <span class="pricing-option__desc" data-i18n="pricing.fields.MULTI_LEVEL_PICKER.desc">Liste derulante în cascadă pentru alegeri ierarhice.</span>
                 </span>
                 <span class="pricing-option__price">2.50 RON</span>
               </label>
-              <label class="pricing-option">
+              <label class="pricing-option" data-feature-code="field:CHECKBOX">
                 <input type="checkbox" data-pricing-addon data-group="fields" data-amount-minor="250">
                 <span class="pricing-option__body">
                   <span class="pricing-option__title" data-i18n="pricing.fields.CHECKBOX.title">Bifă</span>
@@ -1567,7 +1619,7 @@
                 </span>
                 <span class="pricing-option__price">2.50 RON</span>
               </label>
-              <label class="pricing-option">
+              <label class="pricing-option" data-feature-code="field:RADIO">
                 <input type="checkbox" data-pricing-addon data-group="fields" data-amount-minor="250">
                 <span class="pricing-option__body">
                   <span class="pricing-option__title" data-i18n="pricing.fields.RADIO.title">Radio</span>
@@ -1575,7 +1627,7 @@
                 </span>
                 <span class="pricing-option__price">2.50 RON</span>
               </label>
-              <label class="pricing-option">
+              <label class="pricing-option" data-feature-code="field:INFINITE_LIST">
                 <input type="checkbox" data-pricing-addon data-group="fields" data-amount-minor="500">
                 <span class="pricing-option__body">
                   <span class="pricing-option__title" data-i18n="pricing.fields.INFINITE_LIST.title">Listă infinită</span>
@@ -1583,7 +1635,7 @@
                 </span>
                 <span class="pricing-option__price">5.00 RON</span>
               </label>
-              <label class="pricing-option">
+              <label class="pricing-option" data-feature-code="field:MAP">
                 <input type="checkbox" data-pricing-addon data-group="fields" data-amount-minor="250">
                 <span class="pricing-option__body">
                   <span class="pricing-option__title" data-i18n="pricing.fields.MAP.title">Hartă</span>
@@ -1591,7 +1643,7 @@
                 </span>
                 <span class="pricing-option__price">2.50 RON</span>
               </label>
-              <label class="pricing-option">
+              <label class="pricing-option" data-feature-code="field:SIGNATURE">
                 <input type="checkbox" data-pricing-addon data-group="fields" data-amount-minor="250">
                 <span class="pricing-option__body">
                   <span class="pricing-option__title" data-i18n="pricing.fields.SIGNATURE.title">Semnătură</span>
@@ -1599,7 +1651,7 @@
                 </span>
                 <span class="pricing-option__price">2.50 RON</span>
               </label>
-              <label class="pricing-option">
+              <label class="pricing-option" data-feature-code="field:PRODUCTS">
                 <input type="checkbox" data-pricing-addon data-group="fields" data-amount-minor="250">
                 <span class="pricing-option__body">
                   <span class="pricing-option__title" data-i18n="pricing.fields.PRODUCTS.title">Produse</span>
@@ -1607,7 +1659,7 @@
                 </span>
                 <span class="pricing-option__price">2.50 RON</span>
               </label>
-              <label class="pricing-option">
+              <label class="pricing-option" data-feature-code="field:TABLE_INPUT">
                 <input type="checkbox" data-pricing-addon data-group="fields" data-amount-minor="250">
                 <span class="pricing-option__body">
                   <span class="pricing-option__title" data-i18n="pricing.fields.TABLE_INPUT.title">Tabel</span>
@@ -1618,10 +1670,10 @@
             </div>
           </div>
 
-          <div class="pricing-group">
+          <div class="pricing-group" data-feature-group="digiStorage">
             <h3 data-i18n="pricing.groups.digiStorage.title">DigiStorage</h3>
             <p data-i18n="pricing.groups.digiStorage.description">Integrare stocare cloud, inclusiv câmpul Selector imagini.</p>
-            <label class="pricing-option">
+            <label class="pricing-option" data-feature-code="digiStorage">
               <input type="checkbox" data-pricing-addon data-group="modules" data-amount-minor="1500">
               <span class="pricing-option__body">
                 <span class="pricing-option__title" data-i18n="pricing.modules.digiStorage.title">DigiStorage + Selector imagini</span>
@@ -1631,60 +1683,66 @@
             </label>
           </div>
 
-          <div class="pricing-group">
+          <div class="pricing-group" data-feature-group="assets">
             <h3 data-i18n="pricing.groups.assets.title">Resurse</h3>
-            <p data-i18n="pricing.groups.assets.description">Încarcă și refolosește imagini și alte resurse statice în șabloane.</p>
-            <label class="pricing-option">
+            <p data-i18n="pricing.groups.assets.description">Încarcă imagini, vizualizează-le în arborele de documente și refolosește-le în șabloane.</p>
+            <label class="pricing-option" data-feature-code="assets">
               <input type="checkbox" data-pricing-addon data-group="modules" data-amount-minor="500">
               <span class="pricing-option__body">
                 <span class="pricing-option__title" data-i18n="pricing.modules.assets.title">Resurse statice</span>
-                <span class="pricing-option__desc" data-i18n="pricing.modules.assets.desc">Încarcă imagini și gestionează resursele din șabloane.</span>
+                <span class="pricing-option__desc" data-i18n="pricing.modules.assets.desc">Încarcă imagini JPEG, PNG sau GIF, vizualizează-le, descarcă-le și refolosește imaginile salvate în șabloane. Fișierele folosesc cota de stocare.</span>
               </span>
               <span class="pricing-option__price">5.00 RON</span>
             </label>
           </div>
 
-          <div class="pricing-group">
+          <div class="pricing-group" data-feature-group="pdf">
             <h3 data-i18n="pricing.groups.pdf.title">PDF</h3>
-            <p data-i18n="pricing.groups.pdf.description">Încărcarea, vizualizarea, descărcarea și combinarea PDF-urilor sunt gratuite în limita spațiului de stocare, la fel ca editorul HTML și descărcarea PDF-urilor generate. Previzualizarea PDF a documentelor generate și editorul vizual de șabloane se plătesc.</p>
-            <label class="pricing-option pricing-option--free">
+            <p data-i18n="pricing.groups.pdf.description">Încărcarea, vizualizarea, descărcarea și combinarea PDF-urilor sunt gratuite în limita cotei de stocare, la fel ca editorul HTML și descărcarea documentelor ca PDF. Previzualizarea PDF-urilor generate din șabloane și editorul vizual de șabloane se plătesc.</p>
+            <label class="pricing-option pricing-option--free" data-feature-code="htmlEditor">
               <input type="checkbox" checked disabled>
               <span class="pricing-option__body">
-                <span class="pricing-option__title" data-i18n="pricing.modules.htmlEditor.title">Editor HTML (v1)</span>
+                <span class="pricing-option__title">
+                  <span data-i18n="pricing.modules.htmlEditor.title">Editor HTML (v1)</span>
+                  <span class="pricing-free-badge" data-i18n="pricing.freeLabel">Gratuit</span>
+                </span>
                 <span class="pricing-option__desc" data-i18n="pricing.modules.htmlEditor.desc">Editează șabloanele direct în cod HTML.</span>
               </span>
-              <span class="pricing-option__price" data-i18n="pricing.freeLabel">Gratuit</span>
             </label>
-            <label class="pricing-option pricing-option--free">
+            <label class="pricing-option pricing-option--free" data-feature-code="pdfDownload">
               <input type="checkbox" checked disabled>
               <span class="pricing-option__body">
-                <span class="pricing-option__title" data-i18n="pricing.modules.pdfDownload.title">Descărcare PDF</span>
+                <span class="pricing-option__title">
+                  <span data-i18n="pricing.modules.pdfDownload.title">Descărcare PDF</span>
+                  <span class="pricing-free-badge" data-i18n="pricing.freeLabel">Gratuit</span>
+                </span>
                 <span class="pricing-option__desc" data-i18n="pricing.modules.pdfDownload.desc">Descarcă documentele ca PDF, inclusiv din linkurile de partajare.</span>
               </span>
-              <span class="pricing-option__price" data-i18n="pricing.freeLabel">Gratuit</span>
             </label>
-            <label class="pricing-option pricing-option--free">
+            <label class="pricing-option pricing-option--free" data-feature-code="pdfFiles">
               <input type="checkbox" checked disabled>
               <span class="pricing-option__body">
-                <span class="pricing-option__title" data-i18n="pricing.modules.pdfFiles.title">Încărcare și combinare PDF</span>
-                <span class="pricing-option__desc" data-i18n="pricing.modules.pdfFiles.desc">Încarcă, vizualizează, descarcă și combină PDF-uri fără abonament. Alege ordinea și păstrează originalele. Fișierele încărcate și copiile combinate folosesc spațiul de stocare, cu 1 GB inclus gratuit.</span>
+                <span class="pricing-option__title">
+                  <span data-i18n="pricing.modules.pdfFiles.title">Încărcare și combinare PDF</span>
+                  <span class="pricing-free-badge" data-i18n="pricing.freeLabel">Gratuit</span>
+                </span>
+                <span class="pricing-option__desc" data-i18n="pricing.modules.pdfFiles.desc">Încarcă un singur PDF odată, folosește tabul Previzualizare și descarcă sau combină PDF-uri. Combină 2–100 de PDF-uri, maximum 100 MB și 5.000 de pagini în total. Nu este necesar un abonament sau credite AI. Originalele și copiile combinate folosesc cota de stocare.</span>
               </span>
-              <span class="pricing-option__price" data-i18n="pricing.freeLabel">Gratuit</span>
             </label>
-            <label class="pricing-option">
+            <label class="pricing-option" data-feature-code="pdfEditor">
               <input type="checkbox" data-pricing-addon data-group="modules" data-amount-minor="1000">
               <span class="pricing-option__body">
                 <span class="pricing-option__title" data-i18n="pricing.modules.pdfEditor.title">Previzualizare PDF generat și editor de șabloane</span>
-                <span class="pricing-option__desc" data-i18n="pricing.modules.pdfEditor.desc">Previzualizează PDF-urile generate și editează șabloanele vizual.</span>
+                <span class="pricing-option__desc" data-i18n="pricing.modules.pdfEditor.desc">Previzualizează PDF-urile generate din șabloanele documentelor și editează șabloanele vizual (v2). Previzualizarea PDF-urilor încărcate este gratuită.</span>
               </span>
               <span class="pricing-option__price">10.00 RON</span>
             </label>
           </div>
 
-          <div class="pricing-group">
+          <div class="pricing-group" data-feature-group="misc">
             <h3 data-i18n="pricing.groups.misc.title">Diverse</h3>
             <p data-i18n="pricing.groups.misc.description">Surse de date, import și export .ddoc, import și legare câmpuri.</p>
-            <label class="pricing-option">
+            <label class="pricing-option" data-feature-code="misc">
               <input type="checkbox" data-pricing-addon data-group="modules" data-amount-minor="1000">
               <span class="pricing-option__body">
                 <span class="pricing-option__title" data-i18n="pricing.modules.misc.title">Funcții diverse</span>
@@ -1694,22 +1752,23 @@
             </label>
           </div>
 
-          <div class="pricing-group">
-            <h3>Contexto</h3>
-            <p data-i18n="pricing.groups.contexto.description">Asistent pentru grupurile WhatsApp Business.</p>
-            <label class="pricing-option">
+          <div class="pricing-group" data-feature-group="contexto">
+            <h3 data-i18n="pricing.groups.contexto.title">Contexto</h3>
+            <p data-i18n="pricing.groups.contexto.description">Asistent pentru grupurile WhatsApp, cu furnizorul AI ales în Setări. Tokenii AI se plătesc separat de abonament.</p>
+            <label class="pricing-option" data-feature-code="contexto">
               <input type="checkbox" data-pricing-addon data-group="modules" data-amount-minor="3000">
               <span class="pricing-option__body">
-                <span class="pricing-option__title">Contexto</span>
-                <span class="pricing-option__desc" data-i18n="pricing.modules.contexto.desc">Rezumate și abilități personalizate. Cheie OpenAI proprie; utilizarea API se plătește separat.</span>
+                <span class="pricing-option__title" data-i18n="pricing.modules.contexto.title">Contexto</span>
+                <span class="pricing-option__desc" data-i18n="pricing.modules.contexto.desc">Răspunsuri, rezumate și abilități personalizate pentru grupurile WhatsApp. Folosește DigitaldocAI cu credite preplătite sau propria cheie OpenAI, conform alegerii din Setări. Tokenii AI costă suplimentar: DigitaldocAI consumă credite; OpenAI facturează contul tău de la furnizor.</span>
               </span>
               <span class="pricing-option__price">30.00 RON</span>
             </label>
           </div>
-          <div class="pricing-group">
+
+          <div class="pricing-group" data-feature-group="medicalFiles">
             <h3 data-i18n="pricing.groups.medicalFiles.title">DICOM și STL</h3>
             <p data-i18n="pricing.groups.medicalFiles.description">Încarcă imagistică medicală (.dcm) și modele 3D (.stl) în documente și vizualizează-le în aplicație. Fișierele folosesc spațiul de stocare.</p>
-            <label class="pricing-option">
+            <label class="pricing-option" data-feature-code="medicalFiles">
               <input type="checkbox" data-pricing-addon data-group="modules" data-amount-minor="5000">
               <span class="pricing-option__body">
                 <span class="pricing-option__title" data-i18n="pricing.modules.medicalFiles.title">Fișiere DICOM și STL</span>
@@ -1718,10 +1777,11 @@
               <span class="pricing-option__price">50.00 RON</span>
             </label>
           </div>
-          <div class="pricing-group">
+
+          <div class="pricing-group" data-feature-group="documentScan">
             <h3 data-i18n="pricing.groups.documentScan.title">Scanare documente</h3>
             <p data-i18n="pricing.groups.documentScan.description">Scanează imaginea unui document și salvează textul extras ca document nou. Digitaldoc nu stochează imaginea. Pe lângă abonamentul lunar, plătești tokenii consumați, fie pe infrastructura DigitaldocAI, fie cu un model extern.</p>
-            <label class="pricing-option">
+            <label class="pricing-option" data-feature-code="documentScan">
               <input type="checkbox" data-pricing-addon data-group="modules" data-amount-minor="2000">
               <span class="pricing-option__body">
                 <span class="pricing-option__title" data-i18n="pricing.modules.documentScan.title">Scanare documente</span>
@@ -1730,51 +1790,54 @@
               <span class="pricing-option__price">20.00 RON</span>
             </label>
           </div>
-          <div class="pricing-group">
+
+          <div class="pricing-group" data-feature-group="documentEditWithAi">
             <h3 data-i18n="pricing.groups.documentEditWithAi.title">Editare documente cu AI</h3>
-            <p data-i18n="pricing.groups.documentEditWithAi.description">Chatul AI îți editează șabloanele documentelor. Pe lângă abonamentul lunar, plătești tokenii consumați, fie pe infrastructura DigitaldocAI, fie cu un model extern.</p>
-            <label class="pricing-option">
+            <p data-i18n="pricing.groups.documentEditWithAi.description">Chatul AI îți editează șabloanele documentelor cu furnizorul ales în Setări. Tokenii AI se plătesc separat de abonament.</p>
+            <label class="pricing-option" data-feature-code="documentEditWithAi">
               <input type="checkbox" data-pricing-addon data-group="modules" data-amount-minor="2000">
               <span class="pricing-option__body">
                 <span class="pricing-option__title" data-i18n="pricing.modules.documentEditWithAi.title">Editare documente cu AI</span>
-                <span class="pricing-option__desc" data-i18n="pricing.modules.documentEditWithAi.desc">Chatul AI din previzualizarea documentului: creează și editează șabloane. DigitaldocAI: 100 RON / 1.000.000 de tokeni (intrare + ieșire), din credite preplătite. Model extern (cheia ta OpenAI): tarifele furnizorului, facturate direct de acesta.</span>
+                <span class="pricing-option__desc" data-i18n="pricing.modules.documentEditWithAi.desc">Chatul AI din previzualizarea documentului creează și editează șabloane cu DigitaldocAI sau cu propria cheie OpenAI. Tokenii AI costă suplimentar: DigitaldocAI consumă credite preplătite; OpenAI facturează contul tău de la furnizor.</span>
               </span>
               <span class="pricing-option__price">20.00 RON</span>
             </label>
           </div>
 
-          <div class="pricing-group">
+          <div class="pricing-group" data-feature-group="storage">
             <h3 data-i18n="pricing.groups.storage.title">Spațiu de stocare</h3>
-            <p data-i18n="pricing.groups.storage.description">Documentele, PDF-urile încărcate și copiile combinate, fișierele DICOM și STL și resursele statice folosesc același spațiu. Include 1 GB gratuit. Alege un singur nivel.</p>
-            <label class="pricing-option pricing-option--free">
+            <p data-i18n="pricing.groups.storage.description">Documentele, PDF-urile încărcate și combinate, fișierele DICOM și STL și resursele statice folosesc același spațiu. Fiecare cont are 1 GB gratuit; contează cel mai mare nivel cumpărat.</p>
+            <label class="pricing-option pricing-option--free" data-feature-code="storage:1GB">
               <input type="radio" name="pricing-storage" data-pricing-addon data-group="storage" data-amount-minor="0" checked>
               <span class="pricing-option__body">
-                <span class="pricing-option__title" data-i18n="pricing.storage.free.title">1 GB gratuit</span>
+                <span class="pricing-option__title">
+                  <span data-i18n="pricing.storage.free.title">1 GB de stocare</span>
+                  <span class="pricing-free-badge" data-i18n="pricing.freeLabel">Gratuit</span>
+                </span>
                 <span class="pricing-option__desc" data-i18n="pricing.storage.free.desc">Inclus în fiecare cont.</span>
               </span>
-              <span class="pricing-option__price" data-i18n="pricing.freeLabel">Gratuit</span>
             </label>
-            <label class="pricing-option">
+            <label class="pricing-option" data-feature-code="storage:5GB">
               <input type="radio" name="pricing-storage" data-pricing-addon data-group="storage" data-amount-minor="1500">
               <span class="pricing-option__body">
                 <span class="pricing-option__title" data-i18n="pricing.storage.tier5.title">5 GB spațiu de stocare</span>
-                <span class="pricing-option__desc" data-i18n="pricing.storage.tier5.desc">Stochează până la 5 GB de documente, fișiere DICOM și STL și resurse.</span>
+                <span class="pricing-option__desc" data-i18n="pricing.storage.tier5.desc">Stochează până la 5 GB de documente, PDF-uri încărcate și combinate, fișiere DICOM și STL și imagini.</span>
               </span>
               <span class="pricing-option__price">15.00 RON</span>
             </label>
-            <label class="pricing-option">
+            <label class="pricing-option" data-feature-code="storage:10GB">
               <input type="radio" name="pricing-storage" data-pricing-addon data-group="storage" data-amount-minor="3000">
               <span class="pricing-option__body">
                 <span class="pricing-option__title" data-i18n="pricing.storage.tier10.title">10 GB spațiu de stocare</span>
-                <span class="pricing-option__desc" data-i18n="pricing.storage.tier10.desc">Stochează până la 10 GB de documente, fișiere DICOM și STL și resurse.</span>
+                <span class="pricing-option__desc" data-i18n="pricing.storage.tier10.desc">Stochează până la 10 GB de documente, PDF-uri încărcate și combinate, fișiere DICOM și STL și imagini.</span>
               </span>
               <span class="pricing-option__price">30.00 RON</span>
             </label>
-            <label class="pricing-option">
+            <label class="pricing-option" data-feature-code="storage:20GB">
               <input type="radio" name="pricing-storage" data-pricing-addon data-group="storage" data-amount-minor="5000">
               <span class="pricing-option__body">
                 <span class="pricing-option__title" data-i18n="pricing.storage.tier20.title">20 GB spațiu de stocare</span>
-                <span class="pricing-option__desc" data-i18n="pricing.storage.tier20.desc">Stochează până la 20 GB de documente, fișiere DICOM și STL și resurse.</span>
+                <span class="pricing-option__desc" data-i18n="pricing.storage.tier20.desc">Stochează până la 20 GB de documente, PDF-uri încărcate și combinate, fișiere DICOM și STL și imagini.</span>
               </span>
               <span class="pricing-option__price">50.00 RON</span>
             </label>
