@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Digitaldoc — Dosare, documente și partajare prin link",
-    "description": "Digitaldoc: organizează documente în foldere, editează conținut bogat, previzualizează PDF și partajează cu un link. Autentificare Google sau parolă."
+    "description": "Digitaldoc: organizează documente, încarcă și combină PDF-uri gratuit, editează conținut și partajează prin link. Include 1 GB de stocare gratuită."
   },
   "a11y": {
     "logoHome": "Digitaldoc acasă",
@@ -28,12 +28,12 @@
   "hero": {
     "badge": "Management documentar în cloud",
     "title": "Dosare, documente și partajare simplă",
-    "lead": "Organizează contracte și fișiere în foldere, editează conținut bogat, previzualizează PDF și partajează cu un link — totul într-o singură aplicație.",
+    "lead": "Organizează contracte și fișiere în foldere, încarcă și combină PDF-uri gratuit, editează conținut bogat și partajează documente prin link — totul într-o singură aplicație.",
     "ctaPrimary": "Creează cont gratuit",
     "ctaSecondary": "Vezi funcționalitățile",
     "pointAuth": "Autentificare Google sau parolă",
     "pointLang": "Interfață în română și engleză",
-    "pointPdf": "Previzualizare PDF integrată"
+    "pointPdf": "Încărcare și combinare PDF gratuite"
   },
   "features": {
     "title": "Tot ce ai nevoie, fără complicații",
@@ -47,8 +47,8 @@
       "desc": "Editor vizual: text formatat, tabele, imagini, șabloane personalizabile și mod avansat pentru pagini complete."
     },
     "pdf": {
-      "title": "Previzualizare PDF",
-      "desc": "Vezi cum arată documentul exportat înainte de a-l partaja — randare rapidă prin serviciul dedicat PDF."
+      "title": "Încărcare și combinare PDF gratuite",
+      "desc": "Încarcă, vizualizează și descarcă PDF-uri gratuit. Combină fișierele în ordinea aleasă într-un PDF nou, păstrând originalele. Fișierele folosesc spațiul de stocare, cu 1 GB inclus gratuit."
     },
     "sharing": {
       "title": "Partajare prin link",
@@ -109,7 +109,7 @@
     "cta": "Începe în aplicație",
     "included": {
       "title": "Gratuit — inclus mereu",
-      "description": "Fișiere și foldere, partajare oaspete (link + PIN) și autentificare."
+      "description": "Fișiere și foldere, încărcare și combinare PDF, partajare oaspete (link + PIN) și autentificare. Include 1 GB de stocare."
     },
     "groups": {
       "fields": {
@@ -127,7 +127,7 @@
       },
       "pdf": {
         "title": "PDF",
-        "description": "Editorul HTML și descărcarea PDF sunt gratuite; previzualizarea PDF și editorul vizual se plătesc."
+        "description": "Încărcarea, vizualizarea, descărcarea și combinarea PDF-urilor sunt gratuite în limita spațiului de stocare, la fel ca editorul HTML și descărcarea PDF-urilor generate. Previzualizarea PDF a documentelor generate și editorul vizual de șabloane se plătesc."
       },
       "misc": {
         "title": "Diverse",
@@ -139,7 +139,7 @@
       },
       "storage": {
         "title": "Spațiu de stocare",
-        "description": "Documentele, fișierele DICOM și STL și resursele statice folosesc același spațiu. Alege un singur nivel."
+        "description": "Documentele, PDF-urile încărcate și copiile combinate, fișierele DICOM și STL și resursele statice folosesc același spațiu. Include 1 GB gratuit. Alege un singur nivel."
       },
       "contexto": {
         "description": "Asistent pentru grupurile WhatsApp Business."
@@ -170,8 +170,12 @@
         "title": "Descărcare PDF",
         "desc": "Descarcă documentele ca PDF, inclusiv din linkurile de partajare."
       },
+      "pdfFiles": {
+        "title": "Încărcare și combinare PDF",
+        "desc": "Încarcă, vizualizează, descarcă și combină PDF-uri fără abonament. Alege ordinea și păstrează originalele. Fișierele încărcate și copiile combinate folosesc spațiul de stocare, cu 1 GB inclus gratuit."
+      },
       "pdfEditor": {
-        "title": "Previzualizare PDF și editor",
+        "title": "Previzualizare PDF generat și editor de șabloane",
         "desc": "Previzualizează PDF-urile generate și editează șabloanele vizual."
       },
       "misc": {
