@@ -149,13 +149,9 @@
         "title": "Document scanning",
         "description": "Scan a document image and save the extracted text as a new document. Digitaldoc does not store the image. On top of the monthly subscription, you pay for the tokens you use, whether on DigitaldocAI infrastructure or with an external model."
       },
-      "documentEditWithAi": {
-        "title": "Document editing with AI",
-        "description": "AI Chat edits your document templates with the provider chosen in Settings. AI token usage is billed separately from the subscription."
-      },
       "aiChat": {
         "title": "AI Chat",
-        "description": "An assistant on its own page that answers your questions about Digitaldoc, with the provider chosen in Settings. Free to use: AI tokens are paid with prepaid credits or by your own provider account."
+        "description": "Ask questions about Digitaldoc and work with your documents using the AI provider chosen in Settings. No monthly subscription: DigitaldocAI consumes prepaid credits for the tokens you use; your own OpenAI key bills your provider account."
       }
     },
     "modules": {
@@ -207,13 +203,9 @@
         "title": "Document scanning",
         "desc": "Scan a document image with the AI provider chosen in Settings and save the extracted text as a new document. DigitaldocAI: 100 RON / 1,000,000 tokens (input + output), from prepaid credits. External model (your own OpenAI key): the provider's rates, billed directly by the provider."
       },
-      "documentEditWithAi": {
-        "title": "Document editing with AI",
-        "desc": "AI Chat in the document preview creates and edits templates using DigitaldocAI or your own OpenAI key. AI token usage costs extra: DigitaldocAI uses prepaid credits; OpenAI bills your provider account."
-      },
       "aiChat": {
         "title": "AI Chat",
-        "desc": "Ask how Digitaldoc works on a dedicated chat page, with the AI provider chosen in Settings. No subscription needed. DigitaldocAI uses prepaid credits; with your own OpenAI key, OpenAI bills your provider account. It only answers questions about Digitaldoc and cannot see your documents or account."
+        "desc": "Get help with Digitaldoc, find and open your documents, and edit fields and templates in AI Chat. No AI Chat subscription is required. DigitaldocAI consumes prepaid credits for input and output tokens; with your own OpenAI key, OpenAI bills your provider account. Paid field types and the visual template editor still require their own features."
       },
       "pdfFiles": {
         "title": "PDF uploads & merging",

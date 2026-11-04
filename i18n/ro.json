@@ -149,13 +149,9 @@
         "title": "Scanare documente",
         "description": "Scanează imaginea unui document și salvează textul extras ca document nou. Digitaldoc nu stochează imaginea. Pe lângă abonamentul lunar, plătești tokenii consumați, fie pe infrastructura DigitaldocAI, fie cu un model extern."
       },
-      "documentEditWithAi": {
-        "title": "Editare documente cu AI",
-        "description": "Chatul AI îți editează șabloanele documentelor cu furnizorul ales în Setări. Tokenii AI se plătesc separat de abonament."
-      },
       "aiChat": {
         "title": "Chat AI",
-        "description": "Un asistent pe o pagină separată, care răspunde la întrebările tale despre Digitaldoc, cu furnizorul ales în Setări. Gratuit: tokenii AI se plătesc din credite preplătite sau prin contul tău de la furnizor."
+        "description": "Pune întrebări despre Digitaldoc și lucrează cu documentele tale folosind furnizorul AI ales în Setări. Fără abonament lunar: DigitaldocAI consumă credite preplătite pentru tokenii folosiți; propria cheie OpenAI folosește facturarea contului tău de la furnizor."
       }
     },
     "modules": {
@@ -207,13 +203,9 @@
         "title": "Scanare documente",
         "desc": "Scanează imaginea unui document cu furnizorul AI ales în Setări și salvează textul extras ca document nou. DigitaldocAI: 100 RON / 1.000.000 de tokeni (intrare + ieșire), din credite preplătite. Model extern (cheia ta OpenAI): tarifele furnizorului, facturate direct de acesta."
       },
-      "documentEditWithAi": {
-        "title": "Editare documente cu AI",
-        "desc": "Chatul AI din previzualizarea documentului creează și editează șabloane cu DigitaldocAI sau cu propria cheie OpenAI. Tokenii AI costă suplimentar: DigitaldocAI consumă credite preplătite; OpenAI facturează contul tău de la furnizor."
-      },
       "aiChat": {
         "title": "Chat AI",
-        "desc": "Întreabă cum funcționează Digitaldoc pe o pagină de chat dedicată, cu furnizorul AI ales în Setări. Nu este necesar un abonament. DigitaldocAI consumă credite preplătite; cu propria cheie OpenAI, OpenAI facturează contul tău de la furnizor. Răspunde numai la întrebări despre Digitaldoc și nu vede documentele sau contul tău."
+        "desc": "Primește ajutor despre Digitaldoc, găsește și deschide documentele tale și editează câmpuri și șabloane în Chat AI. Nu este necesar un abonament pentru Chat AI. DigitaldocAI consumă credite preplătite pentru tokenii de intrare și ieșire; cu propria cheie OpenAI, OpenAI facturează contul tău de la furnizor. Tipurile de câmpuri cu plată și editorul vizual de șabloane necesită în continuare propriile funcții."
       },
       "pdfFiles": {
         "title": "Încărcare și combinare PDF",
