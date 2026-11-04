@@ -152,6 +152,10 @@
       "documentEditWithAi": {
         "title": "Document editing with AI",
         "description": "AI Chat edits your document templates with the provider chosen in Settings. AI token usage is billed separately from the subscription."
+      },
+      "aiChat": {
+        "title": "AI Chat",
+        "description": "An assistant on its own page that answers your questions about Digitaldoc, with the provider chosen in Settings. Free to use: AI tokens are paid with prepaid credits or by your own provider account."
       }
     },
     "modules": {
@@ -206,6 +210,10 @@
       "documentEditWithAi": {
         "title": "Document editing with AI",
         "desc": "AI Chat in the document preview creates and edits templates using DigitaldocAI or your own OpenAI key. AI token usage costs extra: DigitaldocAI uses prepaid credits; OpenAI bills your provider account."
+      },
+      "aiChat": {
+        "title": "AI Chat",
+        "desc": "Ask how Digitaldoc works on a dedicated chat page, with the AI provider chosen in Settings. No subscription needed. DigitaldocAI uses prepaid credits; with your own OpenAI key, OpenAI bills your provider account. It only answers questions about Digitaldoc and cannot see your documents or account."
       },
       "pdfFiles": {
         "title": "PDF uploads & merging",

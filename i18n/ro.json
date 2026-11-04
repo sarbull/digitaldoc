@@ -152,6 +152,10 @@
       "documentEditWithAi": {
         "title": "Editare documente cu AI",
         "description": "Chatul AI îți editează șabloanele documentelor cu furnizorul ales în Setări. Tokenii AI se plătesc separat de abonament."
+      },
+      "aiChat": {
+        "title": "Chat AI",
+        "description": "Un asistent pe o pagină separată, care răspunde la întrebările tale despre Digitaldoc, cu furnizorul ales în Setări. Gratuit: tokenii AI se plătesc din credite preplătite sau prin contul tău de la furnizor."
       }
     },
     "modules": {
@@ -206,6 +210,10 @@
       "documentEditWithAi": {
         "title": "Editare documente cu AI",
         "desc": "Chatul AI din previzualizarea documentului creează și editează șabloane cu DigitaldocAI sau cu propria cheie OpenAI. Tokenii AI costă suplimentar: DigitaldocAI consumă credite preplătite; OpenAI facturează contul tău de la furnizor."
+      },
+      "aiChat": {
+        "title": "Chat AI",
+        "desc": "Întreabă cum funcționează Digitaldoc pe o pagină de chat dedicată, cu furnizorul AI ales în Setări. Nu este necesar un abonament. DigitaldocAI consumă credite preplătite; cu propria cheie OpenAI, OpenAI facturează contul tău de la furnizor. Răspunde numai la întrebări despre Digitaldoc și nu vede documentele sau contul tău."
       },
       "pdfFiles": {
         "title": "Încărcare și combinare PDF",
