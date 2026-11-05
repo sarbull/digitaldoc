@@ -201,7 +201,7 @@
       },
       "documentScan": {
         "title": "Document scanning",
-        "desc": "Scan a document image with the AI provider chosen in Settings and save the extracted text as a new document. DigitaldocAI: 100 RON / 1,000,000 tokens (input + output), from prepaid credits. External model (your own OpenAI key): the provider's rates, billed directly by the provider."
+        "desc": "Scan a document image with the AI provider chosen in Settings and save the extracted text as a new document. DigitaldocAI: 0.01 RON / 1,000 tokens (10 RON / 1,000,000 tokens, input + output), from prepaid credits. External model (your own OpenAI key): the provider's rates, billed directly by the provider."
       },
       "aiChat": {
         "title": "AI Chat",

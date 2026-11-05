@@ -201,7 +201,7 @@
       },
       "documentScan": {
         "title": "Scanare documente",
-        "desc": "Scanează imaginea unui document cu furnizorul AI ales în Setări și salvează textul extras ca document nou. DigitaldocAI: 100 RON / 1.000.000 de tokeni (intrare + ieșire), din credite preplătite. Model extern (cheia ta OpenAI): tarifele furnizorului, facturate direct de acesta."
+        "desc": "Scanează imaginea unui document cu furnizorul AI ales în Setări și salvează textul extras ca document nou. DigitaldocAI: 0,01 RON / 1.000 de tokeni (10 RON / 1.000.000 de tokeni, intrare + ieșire), din credite preplătite. Model extern (cheia ta OpenAI): tarifele furnizorului, facturate direct de acesta."
       },
       "aiChat": {
         "title": "Chat AI",
